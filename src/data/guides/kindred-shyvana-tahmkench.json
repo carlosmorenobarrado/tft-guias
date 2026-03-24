@@ -1,0 +1,242 @@
+{
+  "slug": "kindred-shyvana-tahmkench",
+  "nombre": "Kindred + Shyvana + TahmKench",
+  "nombreCorto": "Kindred Bilgewater",
+  "dificultad": "Media",
+  "nGames": 35,
+  "top4Rate": 0.971,
+  "winRate": 0.571,
+  "avgPlacement": 1.8,
+  "avgLevel": 9.2,
+  "descripcion": "La mejor comp de Kindred del meta. Combina el carry de AD con frontline Juggernaut y sinergia Bilgewater. Muy alto winrate además de consistencia.",
+  "traits": [
+    {
+      "nombre": "Bilgewater",
+      "count": 3
+    },
+    {
+      "nombre": "Rapidfire",
+      "count": 2
+    },
+    {
+      "nombre": "Juggernaut",
+      "count": 2
+    },
+    {
+      "nombre": "Brawler",
+      "count": 2
+    },
+    {
+      "nombre": "Glutton",
+      "count": 1
+    }
+  ],
+  "items": {
+    "Kindred": {
+      "core": [
+        "Guinsoo's Rageblade",
+        "Kraken's Fury",
+        "Giant Slayer"
+      ],
+      "alternativas": [
+        "Last Whisper",
+        "Infinity Edge"
+      ]
+    },
+    "Shyvana": {
+      "core": [
+        "Warmog's Armor",
+        "Dragon's Claw",
+        "Bramble Vest"
+      ],
+      "alternativas": [
+        "Gargoyle Stoneplate",
+        "Titan's Resolve"
+      ]
+    },
+    "TahmKench": {
+      "core": [
+        "Steadfast Heart",
+        "Adaptive Helm",
+        "Spirit Visage"
+      ],
+      "alternativas": [
+        "Warmog's Armor",
+        "Gargoyle Stoneplate"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Busca cualquier AD carry temporal. Los componentes de Guinsoo's (Bow + Rod) son prioridad. Bilgewater tiene unidades baratas para early.",
+      "tips": [
+        "Graves y Twisted Fate son buenos early con Bilgewater",
+        "Guarda Bows para Kindred",
+        "Miss Fortune puede holdear items de AD"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 7-8 buscando Kindred y Shyvana. TahmKench aparece a nivel 8. Miss Fortune es un excelente carry secundario con Rapidfire.",
+      "tips": [
+        "Kindred 2-star es el spike principal",
+        "Shyvana tankea mientras Kindred hace damage",
+        "Bilgewater da oro extra - aprovechalo"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Esta comp tiene muy alto winrate - juega agresivo para primeros. Posiciona Kindred protegida y Shyvana/TahmKench en front.",
+      "tips": [
+        "Miss Fortune 2-star es segundo win condition",
+        "TahmKench ulti come enemigos - muy fuerte",
+        "Puedes llegar a nivel 9 para meter mas Bilgewater"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Encuentras Miss Fortune con items de AD",
+      "ajuste": "Miss Fortune puede ser carry principal. Kindred pasa a carry secundario o incluso prescindible.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "No encuentras TahmKench",
+      "ajuste": "Usa Nautilus o cualquier frontline Bilgewater. Pierdes Glutton pero mantienes la sinergia.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Tienes Ornn",
+      "ajuste": "Ornn puede reemplazar a TahmKench. Pierdes Bilgewater pero ganas Blacksmith items.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Kindred al 4-2 con menos de 50 HP",
+      "severidad": "critica",
+      "alternativa": "Pivota a Miss Fortune carry o cualquier AD carry que tengas 2-star"
+    },
+    {
+      "senal": "3+ jugadores contestando Kindred",
+      "severidad": "alta",
+      "alternativa": "Considera Fiddlesticks o Azir como carry alternativo"
+    },
+    {
+      "senal": "Sin Bow components al 2-1",
+      "severidad": "media",
+      "alternativa": "Kindred necesita attack speed - considera otras comps"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 476,
+    "units": [
+      {
+        "character_id": "TFT16_Kindred",
+        "frecuencia": 101.7,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_GuinsoosRageblade",
+          "TFT_Item_RunaansHurricane"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 101.9,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_TahmKench",
+        "frecuencia": 101.3,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT_Item_AdaptiveHelm"
+        ]
+      },
+      {
+        "character_id": "TFT16_MissFortune",
+        "frecuencia": 98.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_InfinityEdge",
+          "TFT_Item_SpearOfShojin"
+        ]
+      },
+      {
+        "character_id": "TFT16_Lucian",
+        "frecuencia": 90.3,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_LastWhisper",
+          "TFT_Item_InfinityEdge"
+        ]
+      },
+      {
+        "character_id": "TFT16_Nautilus",
+        "frecuencia": 87.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SpectralGauntlet",
+          "TFT_Item_SpectralGauntlet"
+        ]
+      },
+      {
+        "character_id": "TFT16_TwistedFate",
+        "frecuencia": 79.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Morellonomicon",
+          "TFT_Item_BlueBuff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Volibear",
+        "frecuencia": 42.9,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_SteraksGage"
+        ]
+      },
+      {
+        "character_id": "TFT16_Ornn",
+        "frecuencia": 40.3,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Redemption",
+          "TFT_Item_RedBuff"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "rolldown",
+  "presion": "alta",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.3,
+    "avg_last_round_bottom4": 29.4,
+    "avg_level_top4": 9.3,
+    "pct_nivel_9_top4": 0.99,
+    "pct_nivel_10_top4": 0.29,
+    "avg_gold_left_top4": 4.9,
+    "avg_players_elim_top4": 1.69,
+    "avg_damage_top4": 145.9
+  },
+  "insight_ejecucion": "El 99% de los top-4 llegan a nivel 9+. Los ganadores aguantan 6 rondas mas de media (hasta ronda 35)."
+}

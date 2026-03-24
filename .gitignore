@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+dist/
+
+# Large data files
+matches_raw.ndjson
+
+# Env
+.env
+
+# Build artifacts
+.astro/
+
+# Executables
+claude.exe
+
+# Claude internal
+.claude/

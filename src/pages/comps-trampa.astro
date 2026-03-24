@@ -1,0 +1,303 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BoardDisplay from '../components/BoardDisplay.astro';
+
+// Load data
+const compStatsRaw = await import('../data/comp_stats.csv?raw');
+const compProfiles = await import('../data/comp_profiles.json');
+const compSummaries = await import('../data/comp_summaries.json');
+
+// Parse CSV
+const lines = compStatsRaw.default.trim().split('\n');
+const headers = lines[0].split(',');
+const comps = lines.slice(1).map(line => {
+  const values = line.split(',');
+  const obj: any = {};
+  headers.forEach((h, i) => obj[h] = values[i]);
+  return {
+    id: obj.comp_core_str,
+    games: parseInt(obj.games),
+    top4_rate: parseFloat(obj.top4_rate),
+    avg_placement: parseFloat(obj.avg_placement),
+    win_rate: parseFloat(obj.win_rate),
+    avg_level: parseFloat(obj.avg_level)
+  };
+});
+
+// Get enriched profile data and board data
+const profiles = compProfiles.default as Record<string, any>;
+const summaries = compSummaries.default as Record<string, any>;
+
+// Find trap comps: games >= 50, top4_rate < 0.55
+const trapComps = comps
+  .filter(c => c.games >= 50 && c.top4_rate < 0.55)
+  .map(c => {
+    const profile = profiles[c.id] || {};
+    const summary = summaries[c.id] || {};
+    const stats = profile.stats || {};
+    return {
+      ...c,
+      estilo: profile.estilo || 'desconocido',
+      avg_level_top4: stats.avg_level_top4 || 0,
+      avg_level_bottom4: stats.avg_level_bottom4 || 0,
+      avg_last_round_top4: stats.avg_last_round_top4 || 0,
+      avg_last_round_bottom4: stats.avg_last_round_bottom4 || 0,
+      pct_nivel_9_top4: stats.pct_nivel_9_top4 || 0,
+      board_completo: summary.board_completo || null
+    };
+  })
+  .sort((a, b) => b.games - a.games);
+
+// Main trap comp: Ahri + Wukong + Yone
+const mainTrap = trapComps.find(c => c.id.includes('Ahri') && c.id.includes('Wukong') && c.id.includes('Yone'));
+
+// Get top tier comps for alternatives (top4_rate >= 0.90)
+const tierSComps = comps
+  .filter(c => c.games >= 30 && c.top4_rate >= 0.90)
+  .sort((a, b) => b.games - a.games)
+  .slice(0, 5);
+
+// Helper to format comp name
+function formatCompName(id: string): string {
+  return id
+    .split(' | ')
+    .map(u => u.replace('TFT16_', ''))
+    .join(' + ');
+}
+
+// Get top 5 trap comps with boards for detailed display
+const topTrapComps = trapComps.filter(c => c.board_completo).slice(0, 5);
+---
+
+<Layout
+  title="Comps Trampa en TFT Set 16 | TFT Stats ES"
+  description="Evita estas comps trampa en TFT Set 16. Comps muy jugadas pero con bajo top4 rate segun datos reales de Challenger/GM."
+>
+  <nav class="mb-6 text-sm">
+    <ol class="flex items-center gap-2 text-tft-gold/60">
+      <li>
+        <a href="/" class="hover:text-tft-orange transition-colors">Inicio</a>
+      </li>
+      <li class="text-tft-orange/40">&gt;</li>
+      <li class="text-tft-gold">Comps Trampa</li>
+    </ol>
+  </nav>
+
+  <header class="mb-8">
+    <h1 class="text-2xl md:text-3xl font-bold text-red-400 mb-4">
+      Comps Trampa en TFT Set 16
+    </h1>
+    <p class="text-tft-gold/80 text-lg mb-4">
+      Evitalas si quieres subir elo
+    </p>
+    <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+      <p class="text-tft-gold/80">
+        Estas comps son <strong class="text-red-400">muy populares</strong> pero tienen
+        <strong class="text-red-400">bajo top-4 rate</strong> en partidas de Challenger/GM.
+        Los datos vienen de {comps.reduce((sum, c) => sum + c.games, 0).toLocaleString()} partidas analizadas.
+        Una comp trampa te hace perder LP porque parece fuerte pero no escala bien o es demasiado contestada.
+      </p>
+    </div>
+  </header>
+
+  <!-- Top Trap Comps with Boards -->
+  <section class="mb-10">
+    <h2 class="text-xl font-bold text-red-400 mb-6">Top 5 Comps Trampa</h2>
+
+    <div class="space-y-8">
+      {topTrapComps.map((comp, index) => (
+        <div class={`bg-tft-dark border rounded-lg p-6 ${index === 0 ? 'border-red-500/50 border-2' : 'border-tft-orange/30'}`}>
+          <!-- Header -->
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="bg-red-500/20 text-red-400 px-2 py-0.5 rounded text-sm font-bold">#{index + 1}</span>
+                <h3 class="text-xl font-bold text-tft-gold">{formatCompName(comp.id)}</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm border border-red-500/40">
+                  {(comp.top4_rate * 100).toFixed(1)}% Top 4
+                </span>
+                <span class="bg-tft-orange/20 text-tft-orange px-3 py-1 rounded-full text-sm border border-tft-orange/40">
+                  {comp.games} partidas
+                </span>
+                <span class={`px-3 py-1 rounded-full text-sm border ${
+                  comp.estilo === 'late_game' ? 'bg-blue-500/20 text-blue-400 border-blue-500/40' :
+                  comp.estilo === 'mid_game' ? 'bg-green-500/20 text-green-400 border-green-500/40' :
+                  'bg-orange-500/20 text-orange-400 border-orange-500/40'
+                }`}>
+                  {comp.estilo === 'late_game' ? 'Late Game' : comp.estilo === 'mid_game' ? 'Mid Game' : comp.estilo}
+                </span>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-bold text-red-400">{comp.avg_placement.toFixed(2)}</div>
+              <div class="text-sm text-tft-gold/60">Avg Placement</div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+            <div class="bg-tft-orange/10 rounded-lg p-3">
+              <div class="text-lg font-bold text-tft-gold">{comp.avg_level_top4.toFixed(1)}</div>
+              <div class="text-xs text-tft-gold/60">Nivel Top4</div>
+            </div>
+            <div class="bg-tft-orange/10 rounded-lg p-3">
+              <div class="text-lg font-bold text-tft-gold">{comp.avg_level_bottom4.toFixed(1)}</div>
+              <div class="text-xs text-tft-gold/60">Nivel Bottom4</div>
+            </div>
+            <div class="bg-tft-orange/10 rounded-lg p-3">
+              <div class="text-lg font-bold text-tft-gold">{comp.pct_nivel_9_top4.toFixed(0)}%</div>
+              <div class="text-xs text-tft-gold/60">Llegan a Nivel 9</div>
+            </div>
+            <div class="bg-tft-orange/10 rounded-lg p-3">
+              <div class="text-lg font-bold text-tft-gold">{comp.avg_last_round_top4.toFixed(0)}</div>
+              <div class="text-xs text-tft-gold/60">Ronda Top4</div>
+            </div>
+          </div>
+
+          <!-- Why it's a trap -->
+          <div class="bg-red-500/10 border-l-4 border-red-500 rounded-r-lg p-4 mb-4">
+            <h4 class="font-bold text-red-400 mb-2">Por que es trampa:</h4>
+            <ul class="space-y-1 text-tft-gold/80 text-sm">
+              {comp.top4_rate < 0.45 && (
+                <li>Top-4 rate de solo {(comp.top4_rate * 100).toFixed(0)}% - muy por debajo del 50%</li>
+              )}
+              {comp.avg_placement > 4.5 && (
+                <li>Avg placement de {comp.avg_placement.toFixed(2)} - consistentemente en bottom 4</li>
+              )}
+              {comp.games > 100 && (
+                <li>Muy contestada: {comp.games} partidas en el dataset indica alta popularidad</li>
+              )}
+              {comp.pct_nivel_9_top4 > 60 && comp.avg_level_bottom4 < 8.5 && (
+                <li>Requiere nivel 9 para ganar pero {(100 - comp.pct_nivel_9_top4).toFixed(0)}% no lo consigue</li>
+              )}
+            </ul>
+          </div>
+
+          <!-- Board Display -->
+          {comp.board_completo && (
+            <BoardDisplay board={comp.board_completo} />
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Alternatives -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-green-400 mb-4">Alternativas Tier S</h2>
+    <p class="text-tft-gold/70 mb-4">Si tienes los items para una comp trampa, considera estas alternativas con +90% top4:</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      {tierSComps.slice(0, 3).map(comp => (
+        <div class="bg-tft-dark border border-green-500/30 rounded-lg p-4">
+          <div class="font-medium text-tft-gold">{formatCompName(comp.id)}</div>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="text-green-400 font-bold">{(comp.top4_rate * 100).toFixed(0)}% top4</span>
+            <span class="text-tft-gold/50 text-sm">{comp.games} games</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Detection Logic -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-tft-orange mb-4">Como detectamos comps trampa</h2>
+    <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+      <p class="text-tft-gold/80 mb-3">
+        Una comp se considera <strong class="text-red-400">trampa</strong> si cumple estos criterios:
+      </p>
+      <ul class="space-y-2 text-tft-gold/70">
+        <li class="flex items-center gap-2">
+          <span class="text-tft-orange">1.</span>
+          <span><strong>Popular:</strong> 50+ partidas en el dataset (la gente la juega mucho)</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-tft-orange">2.</span>
+          <span><strong>Bajo rendimiento:</strong> Top-4 rate menor al 55%</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-tft-orange">3.</span>
+          <span><strong>Placement promedio:</strong> Por encima de 4.5 (la mitad de la tabla)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- All Trap Comps Table -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-red-400 mb-4">
+      Todas las Comps Trampa ({trapComps.length})
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-tft-orange/30">
+            <th class="text-left py-3 px-2 text-tft-gold/60">Comp</th>
+            <th class="text-center py-3 px-2 text-tft-gold/60">Games</th>
+            <th class="text-center py-3 px-2 text-tft-gold/60">Top 4%</th>
+            <th class="text-center py-3 px-2 text-tft-gold/60">Avg Place</th>
+            <th class="text-center py-3 px-2 text-tft-gold/60">Estilo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {trapComps.map((comp, i) => (
+            <tr class={`border-b border-tft-orange/10 ${i < 5 ? 'bg-red-500/5' : ''}`}>
+              <td class="py-3 px-2">
+                <span class="text-tft-gold">{formatCompName(comp.id)}</span>
+              </td>
+              <td class="text-center py-3 px-2 text-tft-gold/70">{comp.games}</td>
+              <td class="text-center py-3 px-2">
+                <span class={`font-medium ${comp.top4_rate < 0.40 ? 'text-red-400' : comp.top4_rate < 0.50 ? 'text-orange-400' : 'text-yellow-400'}`}>
+                  {(comp.top4_rate * 100).toFixed(1)}%
+                </span>
+              </td>
+              <td class="text-center py-3 px-2 text-tft-gold/70">{comp.avg_placement.toFixed(2)}</td>
+              <td class="text-center py-3 px-2">
+                <span class={`text-xs px-2 py-0.5 rounded ${
+                  comp.estilo === 'late_game' ? 'bg-blue-500/20 text-blue-400' :
+                  comp.estilo === 'mid_game' ? 'bg-green-500/20 text-green-400' :
+                  comp.estilo === 'reroll' ? 'bg-orange-500/20 text-orange-400' :
+                  'bg-gray-500/20 text-gray-400'
+                }`}>
+                  {comp.estilo || '?'}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-tft-orange mb-4">Como evitar caer en comps trampa</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">1. Mira el lobby antes de commitear</h3>
+        <p class="text-tft-gold/70 text-sm">Si ves 3+ jugadores con las mismas piezas, busca otra comp. Las comps trampa suelen ser populares.</p>
+      </div>
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">2. Evalua tu HP en stage 4</h3>
+        <p class="text-tft-gold/70 text-sm">Si llegas con menos de 50 HP a stage 4, las comps trampa (que necesitan late game) no son para ti.</p>
+      </div>
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">3. Prioriza comps con spike mid</h3>
+        <p class="text-tft-gold/70 text-sm">Las mejores comps tienen un punto de poder en nivel 7-8, no solo en nivel 9+.</p>
+      </div>
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">4. Conoce tus alternativas</h3>
+        <p class="text-tft-gold/70 text-sm">Siempre ten 2-3 comps backup que usen items similares para pivotar si es necesario.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-8">
+    <a href="/" class="text-tft-orange hover:text-tft-gold transition-colors">
+      &larr; Volver a la Tier List
+    </a>
+  </div>
+</Layout>

@@ -1,0 +1,27 @@
+---
+interface Props {
+  label: string;
+  value: number;
+  max?: number;
+  color?: string;
+  showPercent?: boolean;
+}
+
+const { label, value, max = 100, color = 'bg-tft-orange', showPercent = true } = Astro.props;
+const percentage = Math.min((value / max) * 100, 100);
+---
+
+<div class="space-y-1">
+  <div class="flex justify-between text-sm">
+    <span class="text-tft-gold/80">{label}</span>
+    <span class="text-tft-gold font-medium">
+      {showPercent ? `${(value * 100).toFixed(1)}%` : value}
+    </span>
+  </div>
+  <div class="h-2 bg-tft-dark rounded-full overflow-hidden border border-tft-orange/30">
+    <div
+      class={`h-full ${color} transition-all duration-300`}
+      style={`width: ${showPercent ? value * 100 : percentage}%`}
+    />
+  </div>
+</div>

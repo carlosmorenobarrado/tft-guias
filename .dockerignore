@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output (will be generated in Docker)
+dist/
+.astro/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# Documentation
+*.md
+!README.md
+
+# Data analysis files (not needed for web)
+*.csv
+*.ipynb
+.ipynb_checkpoints/
+
+# Large data files
+comp_summaries.json
+
+# Claude
+.claude/
+CLAUDE.md

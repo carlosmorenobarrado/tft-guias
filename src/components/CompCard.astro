@@ -1,0 +1,48 @@
+---
+import TierBadge from './TierBadge.astro';
+import StatBar from './StatBar.astro';
+
+interface Props {
+  slug: string;
+  nombre: string;
+  top4Rate: number;
+  winRate: number;
+  dificultad: 'Baja' | 'Media' | 'Alta';
+  nGames: number;
+}
+
+const { slug, nombre, top4Rate, winRate, dificultad, nGames } = Astro.props;
+
+const tier = top4Rate >= 0.90 ? 'S' : top4Rate >= 0.75 ? 'A' : 'B';
+
+const dificultadColor = {
+  Baja: 'text-green-400',
+  Media: 'text-yellow-400',
+  Alta: 'text-red-400',
+};
+---
+
+<a
+  href={`/comps/${slug}`}
+  class="block bg-tft-dark border border-tft-orange/30 rounded-lg p-4 hover:border-tft-orange transition-colors hover:bg-tft-orange/5"
+>
+  <div class="flex items-start gap-3 mb-4">
+    <TierBadge tier={tier} />
+    <div class="flex-1 min-w-0">
+      <h3 class="font-bold text-tft-gold truncate">{nombre}</h3>
+      <p class="text-sm text-tft-gold/60">
+        {nGames} partidas analizadas
+      </p>
+    </div>
+  </div>
+
+  <div class="space-y-3">
+    <StatBar label="Top 4 Rate" value={top4Rate} color="bg-tier-s" />
+    <StatBar label="Win Rate" value={winRate} color="bg-tft-blue" />
+  </div>
+
+  <div class="mt-4 flex justify-between items-center text-sm">
+    <span class="text-tft-gold/60">Dificultad:</span>
+    <span class={dificultadColor[dificultad]}>{dificultad}</span>
+  </div>
+</a>

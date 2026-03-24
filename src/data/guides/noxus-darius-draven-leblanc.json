@@ -1,0 +1,167 @@
+{
+  "slug": "noxus-darius-draven-leblanc",
+  "nombre": "Noxus Reroll — Darius + Draven + LeBlanc",
+  "nombreCorto": "Noxus Reroll",
+  "dificultad": "Alta",
+  "nGames": 50,
+  "top4Rate": 0.95,
+  "winRate": 0.40,
+  "avgPlacement": 2.1,
+  "avgLevel": 7.8,
+  "descripcion": "La comp más sólida del meta actual. Tres carries a 3★ sostenidos por el trait Noxus, con Darius tanqueando el frente y Draven + LeBlanc destruyendo desde atrás. Rolldown agresivo en nivel 7 con slowroll previo en nivel 6 para asegurar copias.",
+  "traits": [
+    { "nombre": "Noxus", "count": 5 },
+    { "nombre": "Bruiser", "count": 2 },
+    { "nombre": "Strategist", "count": 2 }
+  ],
+  "items": {
+    "Darius": {
+      "core": ["Sterak's Gage", "Titanic Hydra", "Bloodthirster"],
+      "alternativas": ["Dragon's Claw", "Warmog's Armor"]
+    },
+    "Draven": {
+      "core": ["Nashor's Tooth", "Kraken's Fury", "Infinity Edge"],
+      "alternativas": ["Giant Slayer", "Last Whisper"]
+    },
+    "LeBlanc": {
+      "core": ["Jeweled Gauntlet", "Blue Buff", "Nashor's Tooth"],
+      "alternativas": ["Rabadon's Deathcap", "Archangel's Staff"]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Juega Noxus desde el primer momento. Briar + Sion como base. Los items de LeBlanc van en Sion de placeholder — activas 3 Noxus en cuanto aparezca LeBlanc. Shen tankea mientras construyes economía.",
+      "tips": [
+        "Briar (1g) y Sion (2g) son tu opener ideal — activan Noxus desde ronda 1",
+        "Pon los items de LeBlanc en Sion de holder hasta encontrarla",
+        "Shen puede tankear el early si aparece antes que Darius"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Slowroll en nivel 6 si no tienes Sion estable. Board objetivo: LeBlanc + Draven + Kobuko + Sion + Darius + Neeko. Prioriza LeBlanc 3★ primero — es la más fácil de completar.",
+      "tips": [
+        "No subas de nivel 6 hasta tener al menos LeBlanc 3★",
+        "Añade un Bruiser en nivel 6 para activar Kobuko con los Conjuradores",
+        "No metas Quickstriker antes de tener los tres carries a 3★ — diluye las copias en tienda"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4+)",
+      "descripcion": "Continúa el rolldown en orden: LeBlanc 3★ → Draven 3★ → Darius 3★. Con los tres completos sube a 8 para añadir Kindred y Shyvana. El board se vuelve prácticamente imbatible.",
+      "tips": [
+        "LeBlanc primero (3g, la menos contestada) → Draven → Darius",
+        "Darius necesita sus items desde el principio aunque esté a 2★",
+        "A nivel 8 mete Kindred y Shyvana — el late game es dominante"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Draven muy contestado en tienda (2+ jugadores buscando)",
+      "ajuste": "Prioriza LeBlanc 3★ primero y usa Draven 2★ como placeholder hasta encontrar copias.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "Encuentras Swain 2★ antes de nivel 8",
+      "ajuste": "Mételo como quinto Noxus — amplifica el daño de todo el board mientras completas los 3★.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Dos o más jugadores buscando Noxus en la misma mesa",
+      "severidad": "critica",
+      "alternativa": "Las copias de Darius/Draven/LeBlanc se agotan — pivota a una comp de nivel 8 con lo que tengas"
+    },
+    {
+      "senal": "Sin ningún carry a 3★ en stage 4-1 con menos de 40 HP",
+      "severidad": "alta",
+      "alternativa": "Sube a nivel 8 y juega fast-9 con los carries que tengas a 2★"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 50,
+    "units": [
+      {
+        "character_id": "TFT16_Darius",
+        "frecuencia": 100.0,
+        "es_core": true,
+        "tier_habitual": 3,
+        "items": ["TFT_Item_SteraksGage", "TFT_Item_TitanicHydra", "TFT_Item_Bloodthirster"]
+      },
+      {
+        "character_id": "TFT16_Draven",
+        "frecuencia": 100.0,
+        "es_core": true,
+        "tier_habitual": 3,
+        "items": ["TFT_Item_NashorsTooth", "TFT_Item_KrakensFury", "TFT_Item_InfinityEdge"]
+      },
+      {
+        "character_id": "TFT16_LeBlanc",
+        "frecuencia": 100.0,
+        "es_core": true,
+        "tier_habitual": 3,
+        "items": ["TFT_Item_JeweledGauntlet", "TFT_Item_BlueBuff", "TFT_Item_NashorsTooth"]
+      },
+      {
+        "character_id": "TFT16_Sion",
+        "frecuencia": 95.0,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": []
+      },
+      {
+        "character_id": "TFT16_Swain",
+        "frecuencia": 80.0,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": []
+      },
+      {
+        "character_id": "TFT16_Kobuko",
+        "frecuencia": 75.0,
+        "es_core": false,
+        "tier_habitual": 1,
+        "items": []
+      },
+      {
+        "character_id": "TFT16_Neeko",
+        "frecuencia": 70.0,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": []
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 85.0,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": []
+      },
+      {
+        "character_id": "TFT16_Kindred",
+        "frecuencia": 60.0,
+        "es_core": false,
+        "tier_habitual": 1,
+        "items": []
+      }
+    ]
+  },
+  "estilo": "reroll",
+  "economia": "rolldown",
+  "presion": "alta",
+  "nivel_optimo": 7,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.3,
+    "avg_last_round_bottom4": 28.1,
+    "avg_level_top4": 7.8,
+    "pct_nivel_9_top4": 0.60,
+    "pct_nivel_10_top4": 0.10,
+    "avg_gold_left_top4": 3.2,
+    "avg_players_elim_top4": 2.1,
+    "avg_damage_top4": 152.0
+  },
+  "insight_ejecucion": "El orden de 3★ es el secreto: LeBlanc primero (3g, menos contestada), luego Draven, por último Darius. Darius con items desde el principio aunque esté a 2★ — sin items no aguanta el mid game."
+}

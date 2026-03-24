@@ -1,0 +1,133 @@
+---
+interface Unit {
+  character_id: string;
+  es_core: boolean;
+}
+
+interface Props {
+  slug: string;
+  nombre: string;
+  nombreCorto?: string;
+  top4Rate: number;
+  winRate: number;
+  dificultad: 'Baja' | 'Media' | 'Alta';
+  nGames: number;
+  units: Unit[];
+}
+
+const { slug, nombre, nombreCorto, top4Rate, winRate, dificultad, nGames, units } = Astro.props;
+
+// Get core units (up to 3) and support units (up to 6)
+const coreUnits = units.filter(u => u.es_core).slice(0, 3);
+const supportUnits = units.filter(u => !u.es_core).slice(0, 6);
+
+// Helper to get champion image URL from Community Dragon
+function getChampionImageUrl(charId: string): string {
+  const champName = charId.toLowerCase();
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champName}/hud/${champName}_square.tft_set16.png`;
+}
+
+// Format unit name
+function formatUnitName(charId: string): string {
+  return charId.replace("TFT16_", "");
+}
+
+const dificultadColor = {
+  Baja: 'text-green-400 bg-green-400/10',
+  Media: 'text-yellow-400 bg-yellow-400/10',
+  Alta: 'text-red-400 bg-red-400/10',
+};
+
+const dificultadLabel = {
+  Baja: 'Facil',
+  Media: 'Media',
+  Alta: 'Dificil',
+};
+---
+
+<a
+  href={`/comps/${slug}`}
+  class="block bg-tft-dark border border-tft-orange/30 rounded-lg p-4 hover:border-tft-orange transition-all hover:bg-tft-orange/5 hover:scale-[1.01]"
+>
+  <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+    <!-- Left: Name and Stats -->
+    <div class="flex-shrink-0 lg:w-48">
+      <h3 class="font-bold text-lg text-tft-gold mb-1">{nombreCorto || nombre}</h3>
+      <div class="flex items-center gap-3 text-sm">
+        <span class="text-tier-s font-bold">{(top4Rate * 100).toFixed(0)}% Top4</span>
+        <span class="text-tft-blue">{(winRate * 100).toFixed(0)}% Win</span>
+      </div>
+      <div class="flex items-center gap-2 mt-2">
+        <span class={`text-xs px-2 py-0.5 rounded ${dificultadColor[dificultad]}`}>
+          {dificultadLabel[dificultad]}
+        </span>
+        <span class="text-xs text-tft-gold/40">{nGames} games</span>
+      </div>
+    </div>
+
+    <!-- Center: Core Units -->
+    <div class="flex-1">
+      <div class="flex items-center gap-1">
+        <!-- Core units with orange border -->
+        {coreUnits.map((unit, index) => (
+          <div class="relative group">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 border-tft-orange bg-tft-dark">
+              <img
+                src={getChampionImageUrl(unit.character_id)}
+                alt={formatUnitName(unit.character_id)}
+                class="w-full h-full object-cover"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="hidden w-full h-full bg-tft-dark items-center justify-center text-xs text-tft-gold/60 font-bold">
+                {formatUnitName(unit.character_id).slice(0, 3)}
+              </div>
+            </div>
+            <!-- Tooltip -->
+            <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <span class="text-[10px] text-tft-gold bg-black/90 px-1.5 py-0.5 rounded whitespace-nowrap">
+                {formatUnitName(unit.character_id)}
+              </span>
+            </div>
+          </div>
+        ))}
+
+        <!-- Separator -->
+        <div class="w-px h-10 bg-tft-gold/20 mx-2 hidden sm:block"></div>
+
+        <!-- Support units with gray border -->
+        <div class="hidden sm:flex items-center gap-1">
+          {supportUnits.map((unit) => (
+            <div class="relative group">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden border border-tft-gold/30 bg-tft-dark opacity-80">
+                <img
+                  src={getChampionImageUrl(unit.character_id)}
+                  alt={formatUnitName(unit.character_id)}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="hidden w-full h-full bg-tft-dark items-center justify-center text-[10px] text-tft-gold/40">
+                  {formatUnitName(unit.character_id).slice(0, 2)}
+                </div>
+              </div>
+              <!-- Tooltip -->
+              <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                <span class="text-[10px] text-tft-gold bg-black/90 px-1.5 py-0.5 rounded whitespace-nowrap">
+                  {formatUnitName(unit.character_id)}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Arrow -->
+    <div class="hidden lg:flex items-center text-tft-orange">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </div>
+  </div>
+</a>

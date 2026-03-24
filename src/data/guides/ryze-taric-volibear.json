@@ -1,0 +1,247 @@
+{
+  "slug": "ryze-taric-volibear",
+  "nombre": "Ryze + Taric + Volibear",
+  "nombreCorto": "Ryze Freljord",
+  "dificultad": "Media",
+  "nGames": 73,
+  "top4Rate": 0.945,
+  "winRate": 0.274,
+  "avgPlacement": 2.3,
+  "avgLevel": 9.4,
+  "descripcion": "Comp de Freljord con Ryze carry y doble frontline tanky. Muy consistente para top 4 gracias a la sinergia Freljord + Targon. Bajo winrate pero altisimo top4.",
+  "traits": [
+    {
+      "nombre": "Freljord",
+      "count": 3
+    },
+    {
+      "nombre": "Rune Mage",
+      "count": 1
+    },
+    {
+      "nombre": "Targon",
+      "count": 2
+    },
+    {
+      "nombre": "Brawler",
+      "count": 2
+    },
+    {
+      "nombre": "Invoker",
+      "count": 2
+    },
+    {
+      "nombre": "Yordle",
+      "count": 2
+    }
+  ],
+  "items": {
+    "Ryze": {
+      "core": [
+        "Jeweled Gauntlet",
+        "Spear of Shojin",
+        "Archangel's Staff"
+      ],
+      "alternativas": [
+        "Archangel's Staff",
+        "Giant Slayer",
+        "Void Staff"
+      ]
+    },
+    "Volibear": {
+      "core": [
+        "Sterak's Gage",
+        "Bloodthirster",
+        "Titan's Resolve"
+      ],
+      "alternativas": [
+        "Warmog's Armor",
+        "Dragon's Claw"
+      ]
+    },
+    "Taric": {
+      "core": [
+        "Spirit Visage",
+        "Warmog's Armor",
+        "Gargoyle Stoneplate"
+      ],
+      "alternativas": [
+        "Bramble Vest",
+        "Dragon's Claw"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Freljord tiene unidades baratas - puedes hacer 2-star facil. Prioriza economia pero no pierdas demasiada vida. Volibear puede aparecer en nivel 6.",
+      "tips": [
+        "Lissandra y Braum son buenos early con Freljord",
+        "Guarda componentes de Shojin para Ryze",
+        "Volibear 1-star ya es fuerte con items"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 7-8 buscando Ryze y completando Freljord. Taric aparece a nivel 8 y estabiliza mucho con su ulti. Volibear puede cargar items finales.",
+      "tips": [
+        "Ryze 2-star es el spike principal",
+        "Wukong es buena inclusion para Invoker",
+        "Taric ulti hace invulnerable - posicionalo bien"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Fast-9 para meter mas legendarios. Esta comp es muy consistente pero no suele ganar lobbies - juega para top 4 seguro.",
+      "tips": [
+        "No necesitas Ryze 3-star para top 4",
+        "Volibear 2-star con items es segundo carry",
+        "Freljord CC stackea muy bien"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Encuentras Volibear 2-star antes que Ryze",
+      "ajuste": "Volibear puede ser carry principal. Anade mas Brawlers y usa Ryze como support de damage.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "Tienes muchos tears/rods",
+      "ajuste": "Prioriza Ryze carry puro con Archangel's. Menos frontline, mas Sorcerers.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Lobby lento sin agresion",
+      "ajuste": "Puedes ir nivel 10 y meter Ornn o Shyvana como frontline extra.",
+      "prioridad": "baja"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Ryze ni Volibear al 4-2",
+      "severidad": "critica",
+      "alternativa": "Pivota a Annie/Tibbers si tienes AP o Kindred si tienes AD"
+    },
+    {
+      "senal": "3+ jugadores jugando Freljord",
+      "severidad": "alta",
+      "alternativa": "Las unidades estaran muy contestadas - considera otras opciones"
+    },
+    {
+      "senal": "Lobby con mucho anti-heal (Morello en todos)",
+      "severidad": "media",
+      "alternativa": "Volibear pierde valor - prioriza Ryze carry puro"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 270,
+    "units": [
+      {
+        "character_id": "TFT16_Ryze",
+        "frecuencia": 101.1,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_JeweledGauntlet",
+          "TFT_Item_ArchangelsStaff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Taric",
+        "frecuencia": 101.1,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Redemption",
+          "TFT_Item_RedBuff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Volibear",
+        "frecuencia": 100.4,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SteraksGage",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_Lissandra",
+        "frecuencia": 86.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_JeweledGauntlet",
+          "TFT_Item_SpearOfShojin"
+        ]
+      },
+      {
+        "character_id": "TFT16_Kobuko",
+        "frecuencia": 84.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_RedBuff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Sejuani",
+        "frecuencia": 73.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_WarmogsArmor"
+        ]
+      },
+      {
+        "character_id": "TFT16_Wukong",
+        "frecuencia": 72.6,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Redemption",
+          "TFT_Item_RedBuff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Kennen",
+        "frecuencia": 68.1,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_RedBuff",
+          "TFT_Item_AdaptiveHelm"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shen",
+        "frecuencia": 53.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_BrambleVest",
+          "TFT16_Item_FreljordEmblemItem"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "mixto",
+  "presion": "alta",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.3,
+    "avg_last_round_bottom4": 29.2,
+    "avg_level_top4": 9.4,
+    "pct_nivel_9_top4": 1.0,
+    "pct_nivel_10_top4": 0.39,
+    "avg_gold_left_top4": 5.4,
+    "avg_players_elim_top4": 1.66,
+    "avg_damage_top4": 142.1
+  },
+  "insight_ejecucion": "El 100% de los top-4 llegan a nivel 9+. Los ganadores aguantan 6 rondas mas de media (hasta ronda 35). Los top-4 conservan mas oro (5 vs 3) - juegan mas econ."
+}

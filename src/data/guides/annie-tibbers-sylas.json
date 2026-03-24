@@ -1,0 +1,242 @@
+{
+  "slug": "annie-tibbers-sylas",
+  "nombre": "Annie + Tibbers + Sylas",
+  "nombreCorto": "Annie Tibbers",
+  "dificultad": "Media",
+  "nGames": 299,
+  "top4Rate": 0.906,
+  "winRate": 0.358,
+  "avgPlacement": 2.41,
+  "avgLevel": 9.4,
+  "descripcion": "Comp de late game centrada en Annie y Tibbers como frontline/damage, con Sylas como carry secundario. Requiere fast-9 para encontrar todas las piezas legendarias.",
+  "traits": [
+    {
+      "nombre": "Dark Child",
+      "count": 1
+    },
+    {
+      "nombre": "Sorcerer",
+      "count": 4
+    },
+    {
+      "nombre": "Sylas Trait",
+      "count": 1
+    },
+    {
+      "nombre": "Defender",
+      "count": 2
+    },
+    {
+      "nombre": "Juggernaut",
+      "count": 2
+    }
+  ],
+  "items": {
+    "Annie": {
+      "core": [
+        "Spear of Shojin",
+        "Void Staff",
+        "Adaptive Helm"
+      ],
+      "alternativas": [
+        "Jeweled Gauntlet",
+        "Archangel's Staff"
+      ]
+    },
+    "Tibbers": {
+      "core": [
+        "Spirit Visage",
+        "Dragon's Claw",
+        "Warmog's Armor"
+      ],
+      "alternativas": [
+        "Gargoyle Stoneplate",
+        "Bramble Vest"
+      ]
+    },
+    "Sylas": {
+      "core": [
+        "Jeweled Gauntlet",
+        "Edge of Night",
+        "Bloodthirster"
+      ],
+      "alternativas": [
+        "Hand of Justice",
+        "Hextech Gunblade"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Juega cualquier opener fuerte. Prioriza pares de Sorcerers o Defenders si los encuentras. No gastes oro buscando Annie - holdea golds para late.",
+      "tips": [
+        "Cualquier 2-star carry temporal funciona",
+        "Preserva componentes de Shojin y Void Staff para Annie",
+        "No pierdas mucha vida - necesitas HP para el fast-9"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 7 en 4-1. Si tienes Annie, empieza a estabilizar. Si no, sigue eco hasta nivel 8. No rolees mucho a 7 - las piezas clave son de nivel 8+.",
+      "tips": [
+        "Busca Annie si está abierta en el lobby",
+        "Sylas puede cargar items de AP temporalmente",
+        "Mantén al menos 30 HP para el fast-9"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Fast-9 agresivo. A nivel 9, busca Tibbers, Sylas 2-star, y completa Shyvana para Juggernaut. Posiciona Tibbers en front para que tankee mientras Annie castea.",
+      "tips": [
+        "Tibbers es la pieza más importante - no juegues sin él",
+        "Nivel 10 si el lobby es lento",
+        "Annie 2-star no es necesario para top 4"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "No encuentras Tibbers al 4-5",
+      "ajuste": "Transiciona a Sylas carry puro con más Defenders (4 Defender). Usa otro frontline legendario como Shyvana o Mel.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "Encuentras Shyvana early (antes del 4-1)",
+      "ajuste": "Prioriza Juggernaut 4 sobre Sorcerer 4. Shyvana con items tank es un win condition alternativo.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Muchos jugadores contestando la comp",
+      "ajuste": "Considera pivotar antes del 4-2. Si 3+ jugadores buscan Annie, tus odds bajan drasticamente.",
+      "prioridad": "alta"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Annie al 4-1 con menos de 50 HP",
+      "severidad": "critica",
+      "alternativa": "Pivota a cualquier comp de Sorcerers disponible o Sylas carry generico"
+    },
+    {
+      "senal": "3+ jugadores contestando Annie/Tibbers",
+      "severidad": "alta",
+      "alternativa": "Busca Azir/Ryze como alternativa de late game"
+    },
+    {
+      "senal": "Sin Shojin ni Void Staff al 3-2",
+      "severidad": "media",
+      "alternativa": "Considera reroll comps que usen tus componentes"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 545,
+    "units": [
+      {
+        "character_id": "TFT16_Annie",
+        "frecuencia": 102.8,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SpearOfShojin",
+          "TFT_Item_StatikkShiv"
+        ]
+      },
+      {
+        "character_id": "TFT16_AnnieTibbers",
+        "frecuencia": 100.7,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_DragonsClaw",
+          "TFT_Item_Redemption"
+        ]
+      },
+      {
+        "character_id": "TFT16_Sylas",
+        "frecuencia": 104.2,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_JeweledGauntlet",
+          "TFT_Item_HextechGunblade"
+        ]
+      },
+      {
+        "character_id": "TFT16_Swain",
+        "frecuencia": 84.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT_Item_ThiefsGloves"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 72.3,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_Lux",
+        "frecuencia": 55.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_JeweledGauntlet",
+          "TFT_Item_ArchangelsStaff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Neeko",
+        "frecuencia": 49.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Crownguard",
+          "TFT_Item_GargoyleStoneplate"
+        ]
+      },
+      {
+        "character_id": "TFT16_Taric",
+        "frecuencia": 49.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_WarmogsArmor",
+          "TFT_Item_Redemption"
+        ]
+      },
+      {
+        "character_id": "TFT16_Galio",
+        "frecuencia": 45.5,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_DragonsClaw"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "mixto",
+  "presion": "alta",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.3,
+    "avg_last_round_bottom4": 29.4,
+    "avg_level_top4": 9.3,
+    "pct_nivel_9_top4": 1.0,
+    "pct_nivel_10_top4": 0.35,
+    "avg_gold_left_top4": 5.5,
+    "avg_players_elim_top4": 1.57,
+    "avg_damage_top4": 136.6
+  },
+  "insight_ejecucion": "El 100% de los top-4 llegan a nivel 9+. Los ganadores aguantan 6 rondas mas de media (hasta ronda 35). Los top-4 conservan mas oro (6 vs 3) - juegan mas econ."
+}

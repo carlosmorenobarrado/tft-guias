@@ -1,0 +1,64 @@
+substitutions:
+  _TAG: 'manual'  # Default for manual builds; overridden by $SHORT_SHA in triggers
+
+steps:
+  # Build the Docker image with GA_ID from Secret Manager
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker build \
+          --build-arg PUBLIC_GA_ID=$$GA_ID \
+          --build-arg PUBLIC_ADSENSE_ID=$$ADSENSE_ID \
+          -t gcr.io/$PROJECT_ID/tft-site:latest \
+          -t gcr.io/$PROJECT_ID/tft-site:${_TAG} \
+          .
+    secretEnv: ['GA_ID', 'ADSENSE_ID']
+
+  # Push both tags
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/tft-site:latest'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/tft-site:${_TAG}'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'tft-site'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/tft-site:latest'
+      - '--region'
+      - 'europe-west1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--memory'
+      - '256Mi'
+      - '--cpu'
+      - '1'
+      - '--max-instances'
+      - '3'
+      - '--port'
+      - '8080'
+
+images:
+  - 'gcr.io/$PROJECT_ID/tft-site:latest'
+  - 'gcr.io/$PROJECT_ID/tft-site:${_TAG}'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/ga-id/versions/latest
+      env: 'GA_ID'
+    - versionName: projects/$PROJECT_ID/secrets/adsense-id/versions/latest
+      env: 'ADSENSE_ID'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

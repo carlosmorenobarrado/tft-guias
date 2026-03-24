@@ -1,0 +1,242 @@
+{
+  "slug": "fiddlesticks-kindred-lucian",
+  "nombre": "Fiddlesticks + Kindred + Lucian",
+  "nombreCorto": "Fiddlesticks Harvester",
+  "dificultad": "Alta",
+  "nGames": 78,
+  "top4Rate": 0.936,
+  "winRate": 0.321,
+  "avgPlacement": 2.22,
+  "avgLevel": 9.4,
+  "descripcion": "Comp de Harvester con Fiddlesticks como carry de AP y Kindred como carry secundario de AD. Doble amenaza que es dificil de itemizar contra.",
+  "traits": [
+    {
+      "nombre": "Harvester",
+      "count": 2
+    },
+    {
+      "nombre": "Kindred Unique",
+      "count": 1
+    },
+    {
+      "nombre": "Soulbound",
+      "count": 2
+    },
+    {
+      "nombre": "Rapidfire",
+      "count": 2
+    },
+    {
+      "nombre": "Juggernaut",
+      "count": 2
+    }
+  ],
+  "items": {
+    "Kindred": {
+      "core": [
+        "Guinsoo's Rageblade",
+        "Kraken's Fury",
+        "Giant Slayer"
+      ],
+      "alternativas": [
+        "Madred's Bloodrazor",
+        "Last Whisper"
+      ]
+    },
+    "Fiddlesticks": {
+      "core": [
+        "Hextech Gunblade",
+        "Jeweled Gauntlet",
+        "Ionic Spark"
+      ],
+      "alternativas": [
+        "Morellonomicon",
+        "Rabadon's Deathcap"
+      ]
+    },
+    "Lucian": {
+      "core": [
+        "Spear of Shojin",
+        "Infinity Edge",
+        "Last Whisper"
+      ],
+      "alternativas": [
+        "Giant Slayer",
+        "Hand of Justice"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Flexea entre AD y AP segun lo que encuentres. Esta comp puede ir en cualquier direccion. Prioriza componentes versatiles como Sword y Rod.",
+      "tips": [
+        "No te comprometas a un carry hasta mid game",
+        "Lucian es buen holder para items de AD",
+        "Cualquier Sorcerer puede holdear items de AP"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "A nivel 7-8 decide tu carry principal segun items. Fiddlesticks aparece nivel 8. La comp tiene flexibilidad - adapta segun el lobby.",
+      "tips": [
+        "Si tienes Guinsoo's, prioriza Kindred",
+        "Si tienes Hextech Gunblade, prioriza Fiddlesticks",
+        "Ambos carries pueden funcionar juntos"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Fast-9 para completar. Fiddlesticks ulti es devastador en teamfights largos. Posiciona para que ulti pegue a muchos enemigos.",
+      "tips": [
+        "Fiddlesticks 2-star cambia fights completamente",
+        "Shyvana es buena adicion para Juggernaut",
+        "Kindred y Fiddlesticks juntos son win condition"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Solo tienes items de AD",
+      "ajuste": "Fiddlesticks pasa a ser utility puro. Kindred + Lucian son los carries, anade mas Rapidfire.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "Solo tienes items de AP",
+      "ajuste": "Fiddlesticks carry puro. Anade Sorcerers y usa Kindred solo por Soulbound.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "Encuentras Shyvana early",
+      "ajuste": "Juggernaut 4 con Shyvana es muy fuerte. Reduce Rapidfire y mete mas frontline.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Fiddlesticks ni Kindred al 4-5",
+      "severidad": "critica",
+      "alternativa": "Juega lo que tengas 2-star - pivota a Annie si tienes AP"
+    },
+    {
+      "senal": "Lobby con mucho CC (stuns, silences)",
+      "severidad": "alta",
+      "alternativa": "Fiddlesticks necesita castear - considera QSS o Edge of Night"
+    },
+    {
+      "senal": "2+ jugadores con Kindred ya",
+      "severidad": "media",
+      "alternativa": "Prioriza Fiddlesticks como carry unico"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 366,
+    "units": [
+      {
+        "character_id": "TFT16_Fiddlesticks",
+        "frecuencia": 100.3,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_ThiefsGloves"
+        ]
+      },
+      {
+        "character_id": "TFT16_Kindred",
+        "frecuencia": 101.1,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_GuinsoosRageblade",
+          "TFT_Item_RunaansHurricane"
+        ]
+      },
+      {
+        "character_id": "TFT16_Lucian",
+        "frecuencia": 100.5,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_InfinityEdge",
+          "TFT_Item_LastWhisper"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 86.1,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_SteraksGage"
+        ]
+      },
+      {
+        "character_id": "TFT16_Swain",
+        "frecuencia": 62.8,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT_Item_FrozenHeart"
+        ]
+      },
+      {
+        "character_id": "TFT16_Draven",
+        "frecuencia": 43.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_RunaansHurricane",
+          "TFT_Item_GuinsoosRageblade"
+        ]
+      },
+      {
+        "character_id": "TFT16_Taric",
+        "frecuencia": 42.1,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_RedBuff",
+          "TFT_Item_Redemption"
+        ]
+      },
+      {
+        "character_id": "TFT16_Ambessa",
+        "frecuencia": 35.8,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_UnstableConcoction"
+        ]
+      },
+      {
+        "character_id": "TFT16_MissFortune",
+        "frecuencia": 32.5,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_InfinityEdge",
+          "TFT_Item_SpearOfShojin"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "mixto",
+  "presion": "media",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.8,
+    "avg_last_round_bottom4": 28.6,
+    "avg_level_top4": 9.3,
+    "pct_nivel_9_top4": 1.0,
+    "pct_nivel_10_top4": 0.33,
+    "avg_gold_left_top4": 8.2,
+    "avg_players_elim_top4": 1.58,
+    "avg_damage_top4": 159.8
+  },
+  "insight_ejecucion": "El 100% de los top-4 llegan a nivel 9+. Los ganadores aguantan 7 rondas mas de media (hasta ronda 36). Los top-4 conservan mas oro (8 vs 4) - juegan mas econ."
+}

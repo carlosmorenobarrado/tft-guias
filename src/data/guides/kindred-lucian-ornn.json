@@ -1,0 +1,247 @@
+{
+  "slug": "kindred-lucian-ornn",
+  "nombre": "Kindred + Lucian + Ornn",
+  "nombreCorto": "Kindred Ornn",
+  "dificultad": "Alta",
+  "nGames": 61,
+  "top4Rate": 0.967,
+  "winRate": 0.508,
+  "avgPlacement": 1.84,
+  "avgLevel": 9.4,
+  "descripcion": "La comp con mejor winrate del meta. Combina Kindred como carry de AD con Ornn para Blacksmith y frontline. Requiere highroll de items y unidades especificas.",
+  "traits": [
+    {
+      "nombre": "Kindred Unique",
+      "count": 1
+    },
+    {
+      "nombre": "Soulbound",
+      "count": 2
+    },
+    {
+      "nombre": "Blacksmith",
+      "count": 1
+    },
+    {
+      "nombre": "Rapidfire",
+      "count": 2
+    },
+    {
+      "nombre": "Warden",
+      "count": 2
+    },
+    {
+      "nombre": "Brawler",
+      "count": 2
+    }
+  ],
+  "items": {
+    "Kindred": {
+      "core": [
+        "Guinsoo's Rageblade",
+        "Kraken's Fury",
+        "Giant Slayer"
+      ],
+      "alternativas": [
+        "Madred's Bloodrazor",
+        "Last Whisper",
+        "Infinity Edge"
+      ]
+    },
+    "Lucian": {
+      "core": [
+        "Infinity Edge",
+        "Last Whisper",
+        "Spear of Shojin"
+      ],
+      "alternativas": [
+        "Giant Slayer",
+        "Hand of Justice"
+      ]
+    },
+    "Ornn": {
+      "core": [
+        "Warmog's Armor",
+        "Dragon's Claw",
+        "Gargoyle Stoneplate"
+      ],
+      "alternativas": [
+        "Bramble Vest",
+        "Spirit Visage"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Busca cualquier opener de AD con bows y swords. Los componentes de Guinsoo's y Runaan's son prioridad absoluta. Preserva HP para tener opciones en late.",
+      "tips": [
+        "Recurve Bow es el componente mas importante",
+        "Cualquier carry de AD temporal funciona (Lucian, Tristana)",
+        "No gastes oro - esta comp necesita nivel 9"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 7-8 estandar. Si encuentras Kindred early, puedes estabilizar. Busca Lucian 2-star como carry temporal mientras transicionas.",
+      "tips": [
+        "Kindred puede usar items finales desde nivel 7",
+        "Ornn aparece a nivel 8 - no rolees antes",
+        "Miss Fortune es buen holder de items de AD"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Fast-9 obligatorio para encontrar Ornn. El item de Blacksmith que crafta Ornn puede definir la partida. Posiciona Kindred protegida detras del frontline.",
+      "tips": [
+        "Ornn craftea items completados - muy valioso",
+        "Kindred 2-star es el powerspike principal",
+        "Tahm Kench es buen frontline secundario con Soulbound"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Encuentras Miss Fortune antes que Kindred",
+      "ajuste": "Miss Fortune puede ser el carry principal con items de AD. Kindred pasa a ser support con Soulbound.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "No encuentras Ornn al nivel 9",
+      "ajuste": "Usa cualquier frontline legendario (Shyvana, Galio). Pierdes Blacksmith pero el carry sigue funcionando.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Lobby con mucho burst fisico",
+      "ajuste": "Prioriza Warden 4 sobre damage adicional. Bramble Vest en todo el frontline.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Recurve Bow al 2-1",
+      "severidad": "critica",
+      "alternativa": "Pivota a comps de AP - no puedes jugar Kindred sin attack speed"
+    },
+    {
+      "senal": "2+ jugadores contestando Kindred",
+      "severidad": "alta",
+      "alternativa": "Considera Fiddlesticks carry o Annie carry como alternativas"
+    },
+    {
+      "senal": "Sin Kindred al 4-5 con menos de 40 HP",
+      "severidad": "critica",
+      "alternativa": "Transiciona a lo que tengas 2-star - no hay tiempo para buscar"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 313,
+    "units": [
+      {
+        "character_id": "TFT16_Kindred",
+        "frecuencia": 101.6,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_GuinsoosRageblade",
+          "TFT_Item_RunaansHurricane"
+        ]
+      },
+      {
+        "character_id": "TFT16_Lucian",
+        "frecuencia": 101.0,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_InfinityEdge",
+          "TFT_Item_LastWhisper"
+        ]
+      },
+      {
+        "character_id": "TFT16_Ornn",
+        "frecuencia": 100.3,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Redemption",
+          "TFT_Item_RedBuff"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 77.3,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_MissFortune",
+        "frecuencia": 71.9,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_InfinityEdge",
+          "TFT_Item_SpearOfShojin"
+        ]
+      },
+      {
+        "character_id": "TFT16_TahmKench",
+        "frecuencia": 71.9,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT16_Item_Bilgewater_PileOCitrus"
+        ]
+      },
+      {
+        "character_id": "TFT16_Nautilus",
+        "frecuencia": 71.6,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SpectralGauntlet",
+          "TFT16_Item_Bilgewater_FreebootersFrock"
+        ]
+      },
+      {
+        "character_id": "TFT16_TwistedFate",
+        "frecuencia": 60.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT16_Item_Bilgewater_CaptainsBrew",
+          "TFT_Item_Morellonomicon"
+        ]
+      },
+      {
+        "character_id": "TFT16_Volibear",
+        "frecuencia": 33.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SteraksGage",
+          "TFT_Item_ThiefsGloves"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "mixto",
+  "presion": "alta",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.6,
+    "avg_last_round_bottom4": 29.3,
+    "avg_level_top4": 9.2,
+    "pct_nivel_9_top4": 0.94,
+    "pct_nivel_10_top4": 0.22,
+    "avg_gold_left_top4": 7.3,
+    "avg_players_elim_top4": 1.61,
+    "avg_damage_top4": 150.6
+  },
+  "insight_ejecucion": "El 94% de los top-4 llegan a nivel 9+. Los ganadores aguantan 6 rondas mas de media (hasta ronda 36). Los top-4 conservan mas oro (7 vs 1) - juegan mas econ."
+}

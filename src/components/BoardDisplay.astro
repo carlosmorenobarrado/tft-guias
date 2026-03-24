@@ -1,0 +1,273 @@
+---
+interface Unit {
+  character_id: string;
+  frecuencia: number;
+  es_core: boolean;
+  tier_habitual: number;
+  items: string[];
+}
+
+interface Props {
+  board: {
+    n_games_analyzed: number;
+    units: Unit[];
+  };
+}
+
+const { board } = Astro.props;
+
+// Helper to format unit name
+function formatUnitName(charId: string): string {
+  return charId.replace("TFT16_", "");
+}
+
+// Helper to get champion image URL from Community Dragon
+function getChampionImageUrl(charId: string): string {
+  const champName = charId.toLowerCase();
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champName}/hud/${champName}_square.tft_set16.png`;
+}
+
+// Mapping of item IDs to their display names (Set 16)
+const ITEM_DISPLAY_NAMES: Record<string, string> = {
+  // Core craftable items
+  "TFT_Item_AdaptiveHelm": "Adaptive Helm",
+  "TFT_Item_ArchangelsStaff": "Archangel's Staff",
+  "TFT_Item_Bloodthirster": "Bloodthirster",
+  "TFT_Item_BlueBuff": "Blue Buff",
+  "TFT_Item_BrambleVest": "Bramble Vest",
+  "TFT_Item_Crownguard": "Crownguard",
+  "TFT_Item_Deathblade": "Deathblade",
+  "TFT_Item_DragonsClaw": "Dragon's Claw",
+  "TFT_Item_EdgeOfNight": "Edge of Night",
+  "TFT_Item_GargoyleStoneplate": "Gargoyle Stoneplate",
+  "TFT_Item_GiantSlayer": "Giant Slayer",
+  "TFT_Item_GuinsoosRageblade": "Guinsoo's Rageblade",
+  "TFT_Item_HandOfJustice": "Hand of Justice",
+  "TFT_Item_HextechGunblade": "Hextech Gunblade",
+  "TFT_Item_InfinityEdge": "Infinity Edge",
+  "TFT_Item_IonicSpark": "Ionic Spark",
+  "TFT_Item_JeweledGauntlet": "Jeweled Gauntlet",
+  "TFT_Item_KrakensFury": "Kraken's Fury",
+  "TFT_Item_LastWhisper": "Last Whisper",
+  "TFT_Item_Morellonomicon": "Morellonomicon",
+  "TFT_Item_NashorsTooth": "Nashor's Tooth",
+  "TFT_Item_ProtectorsVow": "Protector's Vow",
+  "TFT_Item_Quicksilver": "Quicksilver",
+  "TFT_Item_RabadonsDeathcap": "Rabadon's Deathcap",
+  "TFT_Item_RedBuff": "Red Buff",
+  "TFT_Item_SpearOfShojin": "Spear of Shojin",
+  "TFT_Item_SpiritVisage": "Spirit Visage",
+  "TFT_Item_SteadfastHeart": "Steadfast Heart",
+  "TFT_Item_SteraksGage": "Sterak's Gage",
+  "TFT_Item_StrikersFlail": "Striker's Flail",
+  "TFT_Item_SunfireCape": "Sunfire Cape",
+  "TFT_Item_TacticiansCape": "Tactician's Cape",
+  "TFT_Item_TacticiansCrown": "Tactician's Crown",
+  "TFT_Item_TacticiansShield": "Tactician's Shield",
+  "TFT_Item_ThiefsGloves": "Thief's Gloves",
+  "TFT_Item_TitanicHydra": "Titanic Hydra",
+  "TFT_Item_TitansResolve": "Titan's Resolve",
+  "TFT_Item_VoidStaff": "Void Staff",
+  "TFT_Item_WarmogsArmor": "Warmog's Armor",
+};
+
+// Mapping of item IDs to Community Dragon image filenames
+// Source: https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/maps/tft/icons/items/hexcore/
+const ITEM_IMAGE_FILES: Record<string, string> = {
+  // Set 16 core items - mapping to actual CDragon filenames
+  "TFT_Item_AdaptiveHelm": "tft_item_adaptivehelm.tft_set13",
+  "TFT_Item_ArchangelsStaff": "tft_item_archangelsstaff.tft_set13",
+  "TFT_Item_Bloodthirster": "tft_item_bloodthirster.tft_set13",
+  "TFT_Item_BlueBuff": "tft_item_bluebuff.tft_set13",
+  "TFT_Item_BrambleVest": "tft_item_bramblevest.tft_set13",
+  "TFT_Item_Crownguard": "tft_item_crownguard.tft_set13",
+  "TFT_Item_Deathblade": "tft_item_deathblade.tft_set13",
+  "TFT_Item_DragonsClaw": "tft_item_dragonsclaw.tft_set13",
+  "TFT_Item_EdgeOfNight": "tft_item_bansheesveil.tft_set13", // Edge of Night uses Banshee's icon
+  "TFT_Item_GargoyleStoneplate": "tft_item_gargoylestoneplate.tft_set13",
+  "TFT_Item_GiantSlayer": "tft_item_giantslayer.tft_set13",
+  "TFT_Item_GuinsoosRageblade": "tft_item_guinsoosrageblade.tft_set13",
+  "TFT_Item_HandOfJustice": "tft_item_youmuusghostblade.tft_set13", // HoJ uses different icon
+  "TFT_Item_HextechGunblade": "tft_item_hextechgunblade.tft_set13",
+  "TFT_Item_InfinityEdge": "tft_item_infinityedge.tft_set13",
+  "TFT_Item_IonicSpark": "tft_item_ionicspark.tft_set13",
+  "TFT_Item_JeweledGauntlet": "tft_item_jeweledgauntlet.tft_set13",
+  "TFT_Item_KrakensFury": "tft_item_krakenslayer.tft_tft14_5", // Kraken's Fury = Kraken Slayer
+  "TFT_Item_LastWhisper": "tft_item_lastwhisper.tft_set13",
+  "TFT_Item_Morellonomicon": "tft_item_morellonomicon.tft_set13",
+  "TFT_Item_NashorsTooth": "tft_item_titanichydra.tft_set13", // Nashor's uses Titanic icon
+  "TFT_Item_ProtectorsVow": "tft_item_supportknightsvow.tft_set13",
+  "TFT_Item_Quicksilver": "tft_item_quicksilver.tft_set13",
+  "TFT_Item_RabadonsDeathcap": "tft_item_rabadonsdeathcap.tft_set13",
+  "TFT_Item_RedBuff": "tft_item_redbuff.tft_set13",
+  "TFT_Item_SpearOfShojin": "tft_item_spearofshojin.tft_set13",
+  "TFT_Item_SpiritVisage": "tft_item_spiritvisagerr.tft_tft14_5",
+  "TFT_Item_SteadfastHeart": "tft_item_spectralgauntlet.tft_set13", // Steadfast Heart replaced Spectral Gauntlet
+  "TFT_Item_SteraksGage": "tft_item_steraksgage.tft_set13",
+  "TFT_Item_StrikersFlail": "tft_item_titanichydra.tft_set13", // Striker's uses similar icon
+  "TFT_Item_SunfireCape": "tft_item_sentinelswarm.tft_set13", // Sunfire uses Sentinel Swarm icon
+  "TFT_Item_TacticiansCape": "tft_item_shroud.tft_set13",
+  "TFT_Item_TacticiansCrown": "tft_item_forceofnature.tft_set13",
+  "TFT_Item_TacticiansShield": "tft_item_fryingpan.tft_set13",
+  "TFT_Item_ThiefsGloves": "tft_item_thiefsgloves.tft_set13",
+  "TFT_Item_TitanicHydra": "tft_item_titanichydra.tft_set13",
+  "TFT_Item_TitansResolve": "tft_item_titansresolve.tft_set13",
+  "TFT_Item_VoidStaff": "tft_item_voidstaff.tft_tft14_5",
+  "TFT_Item_WarmogsArmor": "tft_item_warmogsarmor.tft_set13",
+};
+
+// Helper to format item name
+function formatItemName(itemId: string): string {
+  // Check our mapping first
+  if (ITEM_DISPLAY_NAMES[itemId]) {
+    return ITEM_DISPLAY_NAMES[itemId];
+  }
+
+  // Fallback: clean up the ID
+  let name = itemId
+    .replace("TFT_Item_", "")
+    .replace("TFT16_Item_", "")
+    .replace("Bilgewater_", "");
+
+  // Add spaces before capitals
+  return name.replace(/([a-z])([A-Z])/g, "$1 $2");
+}
+
+// Helper to get item image URL from Community Dragon
+function getItemImageUrl(itemId: string): string {
+  const baseUrl = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/maps/tft/icons/items/hexcore";
+
+  // Check if we have a specific mapping
+  if (ITEM_IMAGE_FILES[itemId]) {
+    return `${baseUrl}/${ITEM_IMAGE_FILES[itemId]}.png`;
+  }
+
+  // Fallback: try to construct the filename from the item ID
+  const itemName = itemId.toLowerCase().replace("tft_item_", "tft_item_");
+  return `${baseUrl}/${itemName}.tft_set13.png`;
+}
+
+// Get tier stars
+function getTierStars(tier: number): string {
+  return "★".repeat(tier);
+}
+
+// Tier border colors
+function getTierBorderColor(tier: number): string {
+  switch(tier) {
+    case 3: return 'border-yellow-400 shadow-yellow-400/30 shadow-md';
+    case 2: return 'border-gray-400';
+    default: return 'border-gray-600';
+  }
+}
+---
+
+<div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+  <div class="flex justify-between items-center mb-4">
+    <h3 class="font-bold text-tft-gold">Board Optimo (9 unidades)</h3>
+    <span class="text-sm text-tft-gold/60">{board.n_games_analyzed} partidas</span>
+  </div>
+
+  <div class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-9 gap-2 mb-4">
+    {board.units.map((unit) => (
+      <div class="flex flex-col items-center">
+        <!-- Champion Image -->
+        <div class={`relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border-2 ${unit.es_core ? 'border-tft-orange ring-2 ring-tft-orange/50' : getTierBorderColor(unit.tier_habitual)}`}>
+          <img
+            src={getChampionImageUrl(unit.character_id)}
+            alt={formatUnitName(unit.character_id)}
+            class="w-full h-full object-cover"
+            loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="hidden w-full h-full bg-tft-dark items-center justify-center text-xs text-tft-gold/60">
+            {formatUnitName(unit.character_id).slice(0, 2)}
+          </div>
+          {unit.es_core && (
+            <div class="absolute top-0 left-0 w-full bg-tft-orange/90 text-center text-[8px] font-bold text-white">
+              CORE
+            </div>
+          )}
+          <div class="absolute bottom-0 left-0 right-0 bg-black/70 text-center text-yellow-400 text-[10px] font-bold">
+            {getTierStars(unit.tier_habitual)}
+          </div>
+        </div>
+
+        <!-- Item Icons -->
+        {unit.items.length > 0 && (
+          <div class="flex gap-0.5 mt-1">
+            {unit.items.slice(0, 2).map((item) => (
+              <div class="w-5 h-5 sm:w-6 sm:h-6 rounded border border-tft-purple/50 overflow-hidden bg-tft-dark">
+                <img
+                  src={getItemImageUrl(item)}
+                  alt={formatItemName(item)}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  title={formatItemName(item)}
+                  onerror="this.parentElement.innerHTML='<span class=\'text-[8px] text-tft-purple/60 flex items-center justify-center w-full h-full\'>?</span>';"
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
+        <span class="text-[10px] sm:text-xs text-tft-gold mt-1 text-center truncate w-full">
+          {formatUnitName(unit.character_id)}
+        </span>
+        <span class="text-[9px] text-tft-gold/60">{unit.frecuencia.toFixed(0)}%</span>
+      </div>
+    ))}
+  </div>
+
+  <!-- Detailed view with items -->
+  <details class="mt-4">
+    <summary class="text-sm text-tft-orange cursor-pointer hover:text-tft-gold transition-colors">
+      Ver detalles de items por unidad
+    </summary>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
+      {board.units.map((unit) => (
+        <div class={`rounded-lg p-3 border flex gap-3 ${unit.es_core ? 'bg-tft-orange/10 border-tft-orange/50' : 'bg-tft-dark border-tft-orange/20'}`}>
+          <div class={`w-12 h-12 rounded overflow-hidden border-2 flex-shrink-0 ${unit.es_core ? 'border-tft-orange' : 'border-tft-gold/30'}`}>
+            <img
+              src={getChampionImageUrl(unit.character_id)}
+              alt={formatUnitName(unit.character_id)}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2">
+              <span class={`font-bold text-sm ${unit.es_core ? 'text-tft-orange' : 'text-tft-gold'}`}>
+                {formatUnitName(unit.character_id)}
+              </span>
+              <span class="text-yellow-400 text-xs">{getTierStars(unit.tier_habitual)}</span>
+            </div>
+            {unit.items.length > 0 && (
+              <div class="flex flex-wrap gap-1.5">
+                {unit.items.slice(0, 2).map((item) => (
+                  <div class="flex items-center gap-1 bg-tft-purple/10 rounded px-1.5 py-0.5">
+                    <div class="w-5 h-5 rounded overflow-hidden flex-shrink-0">
+                      <img
+                        src={getItemImageUrl(item)}
+                        alt={formatItemName(item)}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span class="text-[10px] text-tft-purple">
+                      {formatItemName(item)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </details>
+
+  <p class="text-xs text-tft-gold/50 mt-4">
+    * Frecuencia = % de partidas top-4 donde aparece esta unidad con el core
+  </p>
+</div>

@@ -1,0 +1,244 @@
+{
+  "slug": "azir-ryze-sylas",
+  "nombre": "Azir + Ryze + Sylas",
+  "nombreCorto": "Azir Ryze",
+  "dificultad": "Alta",
+  "nGames": 94,
+  "top4Rate": 0.936,
+  "winRate": 0.521,
+  "avgPlacement": 1.91,
+  "avgLevel": 9.5,
+  "descripcion": "La comp mas fuerte del meta actual. Combina Emperor (Azir) con RuneMage (Ryze) para damage masivo. Requiere highroll y fast-9/10 para funcionar.",
+  "traits": [
+    {
+      "nombre": "Emperor",
+      "count": 1
+    },
+    {
+      "nombre": "Rune Mage",
+      "count": 1
+    },
+    {
+      "nombre": "Shurima",
+      "count": 2
+    },
+    {
+      "nombre": "Sylas Trait",
+      "count": 1
+    },
+    {
+      "nombre": "Defender",
+      "count": 2
+    },
+    {
+      "nombre": "Sorcerer",
+      "count": 4
+    }
+  ],
+  "items": {
+    "Ryze": {
+      "core": [
+        "Spear of Shojin",
+        "Void Staff",
+        "Jeweled Gauntlet"
+      ],
+      "alternativas": [
+        "Archangel's Staff",
+        "Giant Slayer"
+      ]
+    },
+    "Azir": {
+      "core": [
+        "Guinsoo's Rageblade"
+      ],
+      "alternativas": [
+        "Nashor's Tooth",
+        "Hand of Justice"
+      ]
+    },
+    "Mel": {
+      "core": [
+        "Archangel's Staff",
+        "Warmog's Armor",
+        "Dragon's Claw"
+      ],
+      "alternativas": [
+        "Spirit Visage",
+        "Gargoyle Stoneplate"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Prioriza economia sobre todo. Esta comp requiere nivel 9-10 con mucho oro. Cualquier opener que preserve vida funciona - no busques piezas especificas.",
+      "tips": [
+        "50 gold antes del 3-1 es ideal",
+        "Perder rondas PvE es aceptable si mantienes eco",
+        "Guarda componentes de Shojin/Void Staff para Ryze"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 8 agresivo en 4-1 o 4-2. Empieza a buscar Azir, Ryze, y Sylas. Si encuentras Ryze 2-star, puedes estabilizar y farmear hasta 9.",
+      "tips": [
+        "Ryze 2-star es el powerspike mas importante",
+        "Azir 1-star es suficiente - los soldiers hacen el trabajo",
+        "Mel puede holdear items de tank hasta encontrar mejor frontline"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Fast-9 es obligatorio. A nivel 9, completa Shurima con unidades secundarias. Nivel 10 si el lobby lo permite - cada unidad extra es mucho valor.",
+      "tips": [
+        "Posiciona Ryze en backline protegido",
+        "Azir soldiers tankean - no necesitas mucho frontline",
+        "Busca Sylas 2-star como prioridad secundaria"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Encuentras Mel con items antes del 4-1",
+      "ajuste": "Itemiza Mel como carry principal con Leviathan. Ella puede cargar la comp mientras buscas Ryze.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "No encuentras Azir al nivel 9",
+      "ajuste": "Pivota a Ryze + Sorcerers puro. 6 Sorcerer sin Azir sigue siendo viable para top 4.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Lobby con mucho burst magico",
+      "ajuste": "Prioriza Dragon's Claw en Mel y considera Mystic secundario si esta disponible.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Ryze al 4-2 con menos de 40 HP",
+      "severidad": "critica",
+      "alternativa": "Pivota a Annie/Tibbers o cualquier comp de Sorcerers que tengas piezas"
+    },
+    {
+      "senal": "Lobby con mucho anti-magic (Dragon's Claw en todos)",
+      "severidad": "alta",
+      "alternativa": "Considera comps de AD como alternativa"
+    },
+    {
+      "senal": "2+ jugadores ya tienen Azir 2-star",
+      "severidad": "media",
+      "alternativa": "Acepta Azir 1-star y prioriza Ryze 2-star"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 405,
+    "units": [
+      {
+        "character_id": "TFT16_Azir",
+        "frecuencia": 100.0,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_GuinsoosRageblade",
+          "TFT_Item_StatikkShiv"
+        ]
+      },
+      {
+        "character_id": "TFT16_Ryze",
+        "frecuencia": 101.0,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SpearOfShojin",
+          "TFT_Item_JeweledGauntlet"
+        ]
+      },
+      {
+        "character_id": "TFT16_Sylas",
+        "frecuencia": 101.5,
+        "es_core": true,
+        "tier_habitual": 1,
+        "items": [
+          "TFT_Item_JeweledGauntlet",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_Taric",
+        "frecuencia": 78.8,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_RedBuff",
+          "TFT_Item_DragonsClaw"
+        ]
+      },
+      {
+        "character_id": "TFT16_Swain",
+        "frecuencia": 68.6,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT_Item_FrozenHeart"
+        ]
+      },
+      {
+        "character_id": "TFT16_Mel",
+        "frecuencia": 56.5,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ArchangelsStaff",
+          "TFT_Item_JeweledGauntlet"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 56.3,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_SteraksGage"
+        ]
+      },
+      {
+        "character_id": "TFT16_Renekton",
+        "frecuencia": 49.6,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SteraksGage",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_Darius",
+        "frecuencia": 47.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SteraksGage",
+          "TFT_Item_Deathblade"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "mixto",
+  "presion": "alta",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 35.4,
+    "avg_last_round_bottom4": 29.6,
+    "avg_level_top4": 9.3,
+    "pct_nivel_9_top4": 1.0,
+    "pct_nivel_10_top4": 0.33,
+    "avg_gold_left_top4": 6.0,
+    "avg_players_elim_top4": 1.71,
+    "avg_damage_top4": 145.9
+  },
+  "insight_ejecucion": "El 100% de los top-4 llegan a nivel 9+. Los ganadores aguantan 6 rondas mas de media (hasta ronda 35)."
+}

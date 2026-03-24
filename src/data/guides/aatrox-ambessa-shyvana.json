@@ -1,0 +1,242 @@
+{
+  "slug": "aatrox-ambessa-shyvana",
+  "nombre": "Aatrox + Ambessa + Shyvana",
+  "nombreCorto": "Aatrox Slayer",
+  "dificultad": "Alta",
+  "nGames": 31,
+  "top4Rate": 0.968,
+  "winRate": 0.258,
+  "avgPlacement": 2.29,
+  "avgLevel": 9.0,
+  "descripcion": "Comp de Slayer con Aatrox como carry principal. Combina sustain de Aatrox con Juggernaut frontline. Muy consistente para top 4 pero dificil de ganar lobbies.",
+  "traits": [
+    {
+      "nombre": "Slayer",
+      "count": 2
+    },
+    {
+      "nombre": "Juggernaut",
+      "count": 2
+    },
+    {
+      "nombre": "Vanquisher",
+      "count": 2
+    },
+    {
+      "nombre": "Darkin",
+      "count": 1
+    },
+    {
+      "nombre": "Noxus",
+      "count": 2
+    }
+  ],
+  "items": {
+    "Aatrox": {
+      "core": [
+        "Bloodthirster",
+        "Titan's Resolve",
+        "Sterak's Gage"
+      ],
+      "alternativas": [
+        "Hand of Justice",
+        "Edge of Night"
+      ]
+    },
+    "Ambessa": {
+      "core": [
+        "Edge of Night",
+        "Sterak's Gage",
+        "Titan's Resolve"
+      ],
+      "alternativas": [
+        "Bloodthirster",
+        "Hand of Justice"
+      ]
+    },
+    "Shyvana": {
+      "core": [
+        "Warmog's Armor",
+        "Dragon's Claw",
+        "Bramble Vest"
+      ],
+      "alternativas": [
+        "Gargoyle Stoneplate",
+        "Thief's Gloves"
+      ]
+    }
+  },
+  "gameplan": {
+    "early": {
+      "titulo": "Early Game (1-3)",
+      "descripcion": "Busca unidades Noxus o Slayer para early. Los componentes de sustain (BF Sword, Belt) son prioridad para Aatrox.",
+      "tips": [
+        "Darius es buen early con Noxus",
+        "Guarda componentes de Bloodthirster",
+        "No necesitas mucha economia - la comp es cara"
+      ]
+    },
+    "mid": {
+      "titulo": "Mid Game (3-4)",
+      "descripcion": "Nivel 7-8 agresivo buscando Aatrox y Ambessa. Ambos son 4-cost. Shyvana aparece a nivel 8 para completar Juggernaut.",
+      "tips": [
+        "Aatrox 2-star es el spike principal",
+        "Ambessa puede cargar items mientras buscas Aatrox",
+        "Bel'Veth es buena adicion si la encuentras"
+      ]
+    },
+    "late": {
+      "titulo": "Late Game (4-5+)",
+      "descripcion": "Nivel 9 para meter mas legendarios. La comp es muy tanky pero le falta burst. Posiciona Aatrox para que ulti pegue a varios.",
+      "tips": [
+        "Aatrox ulti es AOE - posiciona para maximos targets",
+        "Bel'Veth con items es segundo win condition",
+        "Swain es buena inclusion para Noxus"
+      ]
+    }
+  },
+  "variantes": [
+    {
+      "condicion": "Encuentras Bel'Veth con items de AD",
+      "ajuste": "Bel'Veth puede ser carry principal. Aatrox pasa a frontline tanky.",
+      "prioridad": "alta"
+    },
+    {
+      "condicion": "No encuentras Ambessa",
+      "ajuste": "Usa Swain o cualquier frontline Noxus. Pierdes Slayer 2 pero mantienes la comp.",
+      "prioridad": "media"
+    },
+    {
+      "condicion": "Tienes Fiddlesticks",
+      "ajuste": "Fiddlesticks puede complementar como AP carry secundario. Muy buena sinergia.",
+      "prioridad": "media"
+    }
+  ],
+  "pivotAlerts": [
+    {
+      "senal": "Sin Aatrox al 4-2",
+      "severidad": "critica",
+      "alternativa": "Pivota a Ambessa carry o cualquier frontline carry que tengas"
+    },
+    {
+      "senal": "3+ jugadores contestando Aatrox/Ambessa",
+      "severidad": "alta",
+      "alternativa": "Considera Fiddlesticks o Kindred como carry alternativo"
+    },
+    {
+      "senal": "Sin sustain items (Bloodthirster components)",
+      "severidad": "media",
+      "alternativa": "Aatrox necesita lifesteal - considera otras comps"
+    }
+  ],
+  "board_completo": {
+    "n_games_analyzed": 265,
+    "units": [
+      {
+        "character_id": "TFT16_Aatrox",
+        "frecuencia": 100.0,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Bloodthirster",
+          "TFT_Item_TitansResolve"
+        ]
+      },
+      {
+        "character_id": "TFT16_Ambessa",
+        "frecuencia": 101.1,
+        "es_core": true,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_SteraksGage",
+          "TFT_Item_UnstableConcoction"
+        ]
+      },
+      {
+        "character_id": "TFT16_Shyvana",
+        "frecuencia": 101.5,
+        "es_core": true,
+        "tier_habitual": 1,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_BelVeth",
+        "frecuencia": 98.5,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_Quicksilver",
+          "TFT_Item_RunaansHurricane"
+        ]
+      },
+      {
+        "character_id": "TFT16_Swain",
+        "frecuencia": 89.4,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_FrozenHeart",
+          "TFT_Item_Morellonomicon"
+        ]
+      },
+      {
+        "character_id": "TFT16_Fiddlesticks",
+        "frecuencia": 77.7,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_HextechGunblade"
+        ]
+      },
+      {
+        "character_id": "TFT16_Gangplank",
+        "frecuencia": 55.1,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Deathblade"
+        ]
+      },
+      {
+        "character_id": "TFT16_Briar",
+        "frecuencia": 50.9,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_ThiefsGloves",
+          "TFT_Item_Bloodthirster"
+        ]
+      },
+      {
+        "character_id": "TFT16_RiftHerald",
+        "frecuencia": 50.2,
+        "es_core": false,
+        "tier_habitual": 2,
+        "items": [
+          "TFT_Item_RedBuff",
+          "TFT_Item_Redemption"
+        ]
+      }
+    ]
+  },
+  "estilo": "late_game",
+  "economia": "rolldown",
+  "presion": "media",
+  "nivel_optimo": 9,
+  "stats_enriquecidas": {
+    "avg_last_round_top4": 34.2,
+    "avg_last_round_bottom4": 29.2,
+    "avg_level_top4": 9.1,
+    "pct_nivel_9_top4": 0.98,
+    "pct_nivel_10_top4": 0.11,
+    "avg_gold_left_top4": 4.6,
+    "avg_players_elim_top4": 1.27,
+    "avg_damage_top4": 128.5
+  },
+  "insight_ejecucion": "El 98% de los top-4 llegan a nivel 9+. Los ganadores aguantan 5 rondas mas de media (hasta ronda 34)."
+}
