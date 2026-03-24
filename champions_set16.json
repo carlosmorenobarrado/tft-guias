@@ -1,0 +1,2416 @@
+[
+  {
+    "id": "TFT16_Anivia",
+    "nombre": "Anivia",
+    "coste": 1,
+    "traits": [
+      "Freljord",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Frostbite",
+      "descripcion": "Fire an ice shard at target that deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. If they are <TFTKeyword>Chilled</TFTKeyword>, the damage Critically&nbsp;Strikes.<br><br>{{TFT_Keyword_Chill}}<br><br>"
+    },
+    "stats": {
+      "hp": 500.0,
+      "damage": 30.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Blitzcrank",
+    "nombre": "Blitzcrank",
+    "coste": 1,
+    "traits": [
+      "Zaun",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Static Field",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleMR%)</magicDamage> magic damage to all enemies within&nbsp;@HexRadius@&nbsp;hex."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 50.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.550000011920929
+    }
+  },
+  {
+    "id": "TFT16_Briar",
+    "nombre": "Briar",
+    "coste": 1,
+    "traits": [
+      "Noxus",
+      "Slayer",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Slayer",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Blood Frenzy",
+      "descripcion": "Leap to the furthest enemy within @HexSearchRadius@ hexes. For @Duration@ seconds gain increased Move Speed, <TFTBonus>@BonusAD*100@%</TFTBonus> Attack Damage, and <TFTBonus>@ModifiedAttackSpeed@&nbsp;(%i:scaleAP%)</TFTBonus> decaying Attack&nbsp;Speed."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 42.0,
+      "armor": 35.0,
+      "mr": 35.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Caitlyn",
+    "nombre": "Caitlyn",
+    "coste": 1,
+    "traits": [
+      "Piltover",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_Piltover",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Ace in the Hole",
+      "descripcion": "Fire a bullet towards the farthest enemy, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to the first enemy it&nbsp;hits. If they die, the bullet ricochets, dealing excess damage to the next enemy&nbsp;hit."
+    },
+    "stats": {
+      "hp": 500.0,
+      "damage": 45.0,
+      "armor": 15.0,
+      "mr": 15.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Illaoi",
+    "nombre": "Illaoi",
+    "coste": 1,
+    "traits": [
+      "Bilgewater",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Tentacle Smash",
+      "descripcion": "Restore <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth>&nbsp;Health and slam a tentacle, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to enemies in a&nbsp;line."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 50.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_JarvanIV",
+    "nombre": "Jarvan IV",
+    "coste": 1,
+    "traits": [
+      "Demacia",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Demacian Standard",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Grant all allies <TFTBonus>@ModifiedAttackSpeed@&nbsp;(%i:scaleAP%)</TFTBonus> Attack Speed for @AttackSpeedDuration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 55.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Jhin",
+    "nombre": "Jhin",
+    "coste": 1,
+    "traits": [
+      "Ionia",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Curtain Call",
+      "descripcion": "For the next 4 attacks, set Attack Speed to <TFTBonus>@SpellFixedAS@</TFTBonus>, gain infinite range and replace attacks with a cannon shot. Cannon shots deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. The 4th shot deals <TFTBonus>@FourthShotDamageMult*100@%</TFTBonus> more&nbsp;damage."
+    },
+    "stats": {
+      "hp": 444.0,
+      "damage": 44.0,
+      "armor": 24.0,
+      "mr": 24.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_KogMaw",
+    "nombre": "Kog'Maw",
+    "coste": 1,
+    "traits": [
+      "Void",
+      "Arcanist",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Sorcerer",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Caustic Spittle",
+      "descripcion": "Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to target and reduce their Armor and Magic Resist by <scaleLevel>@ArmorReduction@</scaleLevel>. Adjacent enemies are dealt <TFTBonus>@PercentToSecondaryEnemies*100@%</TFTBonus> of the damage and&nbsp;effect."
+    },
+    "stats": {
+      "hp": 500.0,
+      "damage": 20.0,
+      "armor": 15.0,
+      "mr": 15.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Lulu",
+    "nombre": "Lulu",
+    "coste": 1,
+    "traits": [
+      "Yordle",
+      "Arcanist"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Sorcerer"
+    ],
+    "habilidad": {
+      "nombre": "Whimsy",
+      "descripcion": "Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to target and make them dance for @StunDuration@ seconds. The projectile then bounces to the nearest target, dealing <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 500.0,
+      "damage": 25.0,
+      "armor": 15.0,
+      "mr": 15.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Qiyana",
+    "nombre": "Qiyana",
+    "coste": 1,
+    "traits": [
+      "Ixtal",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "Clear The Brush",
+      "descripcion": "Dash to a nearby hex and swing forward, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies in a @HexDistance@-hex line."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 42.0,
+      "armor": 35.0,
+      "mr": 35.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Rumble",
+    "nombre": "Rumble",
+    "coste": 1,
+    "traits": [
+      "Yordle",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Junkyard Titan",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. Fire a burst of flames, dealing <magicDamage>@TotalDamage@&nbsp;(%i:scaleArmor%)</magicDamage> magic damage in a&nbsp;cone."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 45.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Shen",
+    "nombre": "Shen",
+    "coste": 1,
+    "traits": [
+      "Ionia",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Stand United",
+      "descripcion": "Grant <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield to this unit and a nearby damaged ally for @Duration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 65.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Sona",
+    "nombre": "Sona",
+    "coste": 1,
+    "traits": [
+      "Demacia",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Power Chord",
+      "descripcion": "Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to @NumEnemies@ nearby enemies and restore <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health to the lowest Health&nbsp;ally."
+    },
+    "stats": {
+      "hp": 500.0,
+      "damage": 20.0,
+      "armor": 15.0,
+      "mr": 15.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Viego",
+    "nombre": "Viego",
+    "coste": 1,
+    "traits": [
+      "Shadow Isles",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_ShadowIsles",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Blade of the Ruined King",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@ModifiedAttackSpeed@%&nbsp;(%i:scaleSouls%)</TFTBonus> Attack Speed.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to target. For the rest of combat, Viego's attacks deal <magicDamage>@ModifiedStackingDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus stacking magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 40.0,
+      "armor": 35.0,
+      "mr": 35.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Aphelios",
+    "nombre": "Aphelios",
+    "coste": 2,
+    "traits": [
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "Incendiary Onslaught",
+      "descripcion": "Start with <TFT_Aphelios_Infernum>Infernum</TFT_Aphelios_Infernum> equipped. On cast, switch to <TFT_Aphelios_Severum>Severum</TFT_Aphelios_Severum> for <TFTBonus>@ModifiedNumAttacks@&nbsp;(%i:scaleAP%)</TFTBonus>&nbsp;attacks.<br><br><TFT_Aphelios_Infernum>Infernum</TFT_Aphelios_Infernum>: Attacks hit @NumTargets@ enemies and apply @SunderRatio*100@% <TFTKeyword>Sunder</TFTKeyword> for @SunderDuration@&nbsp;seconds.<br><TFT_Aphelios_Severum>Severum</TFT_Aphelios_Severum>: Gain <TFTBonus>@AttackSpeed*100@%</TFTBonus> Attack Speed and <TFTBonus>@Omnivamp*100@%</TFTBonus> Omnivamp. Attacks are replaced with swipes that deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical&nbsp;damage.<br><br>{{TFT_Keyword_Sunder}}"
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 20.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Ashe",
+    "nombre": "Ashe",
+    "coste": 2,
+    "traits": [
+      "Freljord",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "True Ice Arrow",
+      "descripcion": "Fire an arrow at target that deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to them and <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> damage to adjacent enemies. Targets below @TrueDamageHealthBreakpoint*100@% max Health take <trueDamage>true damage</trueDamage> instead. 30% <TFTKeyword>Chill</TFTKeyword> all enemies hit for @Duration@&nbsp;seconds.<br><br><ShowIfNot.TFT16_Unit_HasPartner><TFTShadowItemBonus>Bloodsworn Bond:</TFTShadowItemBonus> When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.</ShowIfNot.TFT16_Unit_HasPartner><ShowIf.TFT16_Unit_HasPartner><TFTShadowItemBonus>Bloodsworn Bond:</TFTShadowItemBonus> Attacks fire a bonus arrow for every @TryndASPerArrow*100@% Attack Damage granted to Tryndamere by Bloodsworn Bond. These arrows deal <physicalDamage>@SmallArrowDamageFinal@&nbsp;(%i:TFTBaseAD%)</physicalDamage> physical damage. (Current&nbsp;Bonus&nbsp;Arrows: <TFTBonus>@TFTUnitProperty.:TFT16_Ashe_CurrentArrows@</TFTBonus>).</ShowIf.TFT16_Unit_HasPartner><br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 550.0,
+      "damage": 60.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Bard",
+    "nombre": "Bardo ",
+    "coste": 2,
+    "traits": [
+      "Caretaker"
+    ],
+    "traits_raw": [
+      "TFT16_Caretaker"
+    ],
+    "habilidad": {
+      "nombre": "Traveler's Call",
+      "descripcion": "Launch @NumMissilesBase@ Meeps at nearby enemies that deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. Add an additional Meep for each 3-star unit on your&nbsp;board. (Total Meeps: <scaleLevel>@TFT16_Bard_Num3Stars@</scaleLevel>)<br> "
+    },
+    "stats": {
+      "hp": 750.0,
+      "damage": 30.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_ChoGath",
+    "nombre": "Cho'Gath",
+    "coste": 2,
+    "traits": [
+      "Void",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Rupture",
+      "descripcion": "Restore <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health and rupture a 2&nbsp;hex circle beneath target. After a brief delay, enemies within are knocked up for @KnockupDuration@ seconds and take <magicDamage>@TotalDamage@&nbsp;(%i:scaleHealth%%i:scaleAP%)</magicDamage> magic&nbsp;damage. "
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Ekko",
+    "nombre": "Ekko",
+    "coste": 2,
+    "traits": [
+      "Zaun",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Parallel Convergence",
+      "descripcion": "Create a @HexRange@&nbsp;hex zone around the target that lasts @Duration@ seconds. The next 3 attacks deal <magicDamage>@BonusMagicDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic&nbsp;damage. <br><br>When the zone ends, it deals <magicDamage>@MagicDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage + <TFTBonus>@DamageRatio*100@%</TFTBonus> of the target's damage taken during the duration to all enemies in the&nbsp;zone."
+    },
+    "stats": {
+      "hp": 750.0,
+      "damage": 35.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Graves",
+    "nombre": "Graves ",
+    "coste": 2,
+    "traits": [
+      "Bilgewater",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Collateral Damage",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks fire in a cone on target, dealing <TFTBonus>@AttackDamageMultiplier*100@%</TFTBonus> damage to other enemies hit. <br><br><spellActive>Active:</spellActive> Fire an explosive shell at target, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage split among enemies in a 1&nbsp;hex&nbsp;circle.  <br><br><TFTShadowItemBonus>Partners in Crime:</TFTShadowItemBonus> When you field Graves and Twisted Fate, both gain bonuses."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Neeko",
+    "nombre": "Neeko",
+    "coste": 2,
+    "traits": [
+      "Ixtal",
+      "Arcanist",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer",
+      "TFT16_Sorcerer",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Pop Blossom",
+      "descripcion": "Leap at target and gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Slam down after a brief delay, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies within two&nbsp;hexes and 20% <TFTKeyword>Chilling</TFTKeyword> them for @ChillDuration@&nbsp;seconds.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Orianna",
+    "nombre": "Orianna ",
+    "coste": 2,
+    "traits": [
+      "Piltover",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Piltover",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Command: Protect",
+      "descripcion": "Send the Ball to target, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and splitting <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage among enemies within a 1&nbsp;hex&nbsp;circle.<br><br>Then grant <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield to the two lowest Health allies for @ShieldDuration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 550.0,
+      "damage": 30.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Poppy",
+    "nombre": "Poppy ",
+    "coste": 2,
+    "traits": [
+      "Demacia",
+      "Yordle",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Yordle",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Hammer Shock",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds and deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to target. After a delay, briefly knock them up and deal the damage again. Bucklers fly out from the target, granting @NumShieldedAllies@ nearby allies <TFTBonus>@AllyShieldAmount*100@%</TFTBonus> of the Shield&nbsp;gained."
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_RekSai",
+    "nombre": "Rek'Sai",
+    "coste": 2,
+    "traits": [
+      "Void",
+      "Vanquisher"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Vanquisher"
+    ],
+    "habilidad": {
+      "nombre": "Burrow",
+      "descripcion": "Dash to the furthest enemy within @EnemySearchDistance@ hexes and deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to them. The next @NumAttacks@ attacks hit adjacent enemies and deal <physicalDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 750.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Sion",
+    "nombre": "Sion",
+    "coste": 2,
+    "traits": [
+      "Noxus",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Soul Furnace",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Takedowns grant <scaleLevel>@HealthPerTakedown@</scaleLevel> permanent max Health.&nbsp;(Total: @TFTUnitProperty.:TFT16_Sion_BonusHealth@)<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleHealth%%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. When it breaks, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleHealth%)</magicDamage> magic damage to adjacent&nbsp;enemies."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 50.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.550000011920929
+    }
+  },
+  {
+    "id": "TFT16_Teemo",
+    "nombre": "Teemo",
+    "coste": 2,
+    "traits": [
+      "Yordle",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Toxic Dart",
+      "descripcion": "Shoot the closest unpoisoned enemy, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and poisoning them for @DOTDuration@ seconds. Poisoned enemies take <magicDamage>@ModifiedDamagePerSecond@&nbsp;(%i:scaleAP%)</magicDamage> magic damage each&nbsp;second."
+    },
+    "stats": {
+      "hp": 550.0,
+      "damage": 35.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Tristana",
+    "nombre": "Tristana",
+    "coste": 2,
+    "traits": [
+      "Yordle",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Buster Shot\t\t\t\t\t\t",
+      "descripcion": "Fire a massive cannonball at target, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. If they are within @KnockbackRadius@ hexes, knock them back @HexKnockback@ hexes and briefly Stun&nbsp;them."
+    },
+    "stats": {
+      "hp": 550.0,
+      "damage": 55.0,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Tryndamere",
+    "nombre": "Tryndamere ",
+    "coste": 2,
+    "traits": [
+      "Freljord",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "Undying Rage",
+      "descripcion": "Become enraged for @Duration@ seconds. While enraged, gain <TFTBonus>@ModifiedDurability@&nbsp;(%i:scaleAP%)</TFTBonus> Durability and attacks are replaced with a strike that deals <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage. Ignore <TFTBonus>@ArmorIgnore*100@%</TFTBonus> of Armor against <TFTKeyword>Chilled</TFTKeyword>&nbsp;enemies.<br><br><ShowIfNot.TFT16_Unit_HasPartner><TFTShadowItemBonus>Bloodsworn Bond:</TFTShadowItemBonus> When you field Ashe and Tryndamere, your strongest copies permanently increase their power on kill.</ShowIfNot.TFT16_Unit_HasPartner><ShowIf.TFT16_Unit_HasPartner><TFTShadowItemBonus>Bloodsworn Bond:</TFTShadowItemBonus> Gain increased Move Speed. Gain <TFTBonus>@AttackSpeed_MustMatchTFT16_Tryndamere_PassiveAS*100@%</TFTBonus> Attack Damage, permanently increased by @TryndASBoostFromAshe*100@% whenever Ashe or Tryndamere score a kill. (Current Bonus: @TFTUnitProperty.:TFT16_Tryndamere_PassiveAS*100@%)</ShowIf.TFT16_Unit_HasPartner><br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 750.0,
+      "damage": 60.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_TwistedFate",
+    "nombre": "Twisted Fate",
+    "coste": 2,
+    "traits": [
+      "Bilgewater",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Stacked Deck",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedBonusAPDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage. After every @NumAttacks@rd attack, throw 3 cards in a cone that deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage, reduced by @FalloffDamage*100@% for each enemy they pass&nbsp;through.<br><br><TFTShadowItemBonus>Partners in Crime:</TFTShadowItemBonus> When you field Graves and Twisted Fate, both gain&nbsp;bonuses"
+    },
+    "stats": {
+      "hp": 550.0,
+      "damage": null,
+      "armor": 20.0,
+      "mr": 20.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Vi",
+    "nombre": "Vi",
+    "coste": 2,
+    "traits": [
+      "Piltover",
+      "Zaun",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Piltover",
+      "TFT16_Zaun",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Relentless Force",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Slam on target, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to enemies in a @HexRange@ hex range. Every third cast deals <physicalDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> damage in a @ThirdCastHexRange@ hex range instead and knocks up enemies hit for @KnockupDuration@&nbsp;second."
+    },
+    "stats": {
+      "hp": 700.0,
+      "damage": 60.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_XinZhao",
+    "nombre": "Xin Zhao",
+    "coste": 2,
+    "traits": [
+      "Demacia",
+      "Ionia",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Ionia",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Three Talon Strike",
+      "descripcion": "Strike target 3 times. Each strike deals <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage and restores <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health. The final one Stuns for @StunDuration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 50.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Yasuo",
+    "nombre": "Yasuo",
+    "coste": 2,
+    "traits": [
+      "Ionia",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "Sweeping Blade",
+      "descripcion": "Dash, then deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to adjacent enemies. If only one enemy is hit, deal double&nbsp;damage.<br><br><ShowIfNot.TFT16_Unit_HasPartner><TFTShadowItemBonus>Blade Brothers:</TFTShadowItemBonus> When you field Yasuo and Yone, Yasuo assists Yone's casts.</ShowIfNot.TFT16_Unit_HasPartner><ShowIf.TFT16_Unit_HasPartner><TFTShadowItemBonus>Blade Brothers:</TFTShadowItemBonus> When Yone casts, your strongest Yasuo blinks to every target Yone hits and deals @YasuoADPercent*100@%&nbsp;%i:TFTBaseAD% physical damage to each.</ShowIf.TFT16_Unit_HasPartner>"
+    },
+    "stats": {
+      "hp": 750.0,
+      "damage": 45.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Yorick",
+    "nombre": "Yorick ",
+    "coste": 2,
+    "traits": [
+      "Shadow Isles",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_ShadowIsles",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Mourning Mist",
+      "descripcion": "Restore <TFTBonus>@ModifiedHeal@&nbsp;(%i:scaleAP%%i:scaleSouls%)</TFTBonus> Health. Throw a globule of black mist at the enemy who has dealt the most damage this combat, preferring unique enemies. It 20% <TFTBonus>Chills</TFTBonus> them for @DebuffDuration@ seconds and raises the Mana cost of their next cast by @ManaCostRaise@. It then deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleHealth%)</magicDamage> magic damage in 1&nbsp;hex&nbsp;radius.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 60.0,
+      "armor": 45.0,
+      "mr": 45.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Ahri",
+    "nombre": "Ahri",
+    "coste": 3,
+    "traits": [
+      "Ionia",
+      "Arcanist"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Sorcerer"
+    ],
+    "habilidad": {
+      "nombre": "Fox-Fire",
+      "descripcion": "Fire @NormalNumBolts@ flames at target, each dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage. Every 3rd cast, fire @SpecialCastNumBolts@ flames split between the target and up to @NumNearbyEnemies@ nearby&nbsp;enemies.<br><br>If there are nearby enemies, dash&nbsp;away."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 30.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Darius",
+    "nombre": "Darius",
+    "coste": 3,
+    "traits": [
+      "Noxus",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Decimate",
+      "descripcion": "Restore <scaleHealth>@TotalHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> Health and spin, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to adjacent enemies and applying a stack of Hemorrhage that deals <physicalDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage each second for @BleedDuration@&nbsp;seconds.<br><br>If an enemy with Hemorrhage drops below <TFTBonus>@ExecutePercentPerHemorrhage*100@%</TFTBonus> Health, slam on them, instantly killing them.<rules> (Each stack increases the execute threshold by&nbsp;@SecondaryExecutePercentPerHemorrhage*100@%)</rules>"
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 50.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_DrMundo",
+    "nombre": "Dr. Mundo",
+    "coste": 3,
+    "traits": [
+      "Zaun",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Maximum Dosage",
+      "descripcion": "Bulk up for @Duration@ seconds. While bulked, restore <scaleHealth>@TotalHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> Health every second and attacks deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleHealth%%i:scaleAD%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 50.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Draven",
+    "nombre": "Draven",
+    "coste": 3,
+    "traits": [
+      "Noxus",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Spinning Axes",
+      "descripcion": "<spellPassive>Passive:</spellPassive> If Draven has an empowered axe in hand, his next attack will throw it. On takedown, gain an Adoration stack, doubled if Draven or Darius scored the kill. Every @TotalTakedown@ Adoration stacks grants <scaleLevel>@GoldAmount@</scaleLevel>&nbsp;Gold. <TFTTrackerLabel>(Adoration&nbsp;Left:&nbsp;@TFTUnitProperty.:TFT16_DravenTakedownsRemaining@, Gold&nbsp;Generated:&nbsp;@TFTUnitProperty.:TFT16_DravenGoldGenerated@g) </TFTTrackerLabel> <br><br><spellActive>Active:</spellActive> Spin an empowered axe that replaces his basic attack and deals <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and returns to Draven after hitting an&nbsp;enemy.<br><br>"
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 58.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Gangplank",
+    "nombre": "Gangplank",
+    "coste": 3,
+    "traits": [
+      "Bilgewater",
+      "Slayer",
+      "Vanquisher"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Slayer",
+      "TFT16_Vanquisher"
+    ],
+    "habilidad": {
+      "nombre": "Powder Kegs",
+      "descripcion": "Toss barrels at the 3 nearest enemies and detonate them. They deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> damage, reduced by @FalloffDamage*100@% for each barrel in the chain. Barrels reduce their target's Armor by <TFTBonus>@ArmorReduction@</TFTBonus>, increased to <TFTBonus>@CritArmorReduction@</TFTBonus> if the damage critically&nbsp;strikes."
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 45.0,
+      "armor": 55.0,
+      "mr": 55.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Gwen",
+    "nombre": "Gwen ",
+    "coste": 3,
+    "traits": [
+      "Shadow Isles",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_ShadowIsles",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Snip Snip!",
+      "descripcion": "Dash around target and snip <TFTBonus>@ModifiedCastSnipTimes@&nbsp;(%i:scaleSouls%)</TFTBonus> times, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to them and <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> damage to all other enemies in a&nbsp;cone."
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 40.0,
+      "armor": 55.0,
+      "mr": 55.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Jinx",
+    "nombre": "Jinx",
+    "coste": 3,
+    "traits": [
+      "Zaun",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Switcheroo!",
+      "descripcion": "<spellPassive>Passive:</spellPassive> After attacking <scaleLevel>@NumAttacks@</scaleLevel> times, switch to Fishbones. While equipped, attacks are replaced with @NumMissiles@ rockets that target random enemies and deal <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 50.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Kennen",
+    "nombre": "Kennen ",
+    "coste": 3,
+    "traits": [
+      "Ionia",
+      "Yordle",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Yordle",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Slicing Maelstrom",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield and summon storm of lightning. @NumBolts@ waves of bolts hit enemies within, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage over @Duration@ seconds. The first @MaxStuns@ targets to be struck by @BoltLimit@ bolts are Stunned for @StunDuration@ seconds. Multiple Stuns on the same enemy have @DuplicateStunReduction*100@%&nbsp;effectiveness."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 50.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Kobuko",
+    "nombre": "Kobuko y Yuumi",
+    "coste": 3,
+    "traits": [
+      "Yordle",
+      "Bruiser",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Brawler",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "You & Me!",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Yuumi joins your strongest Kobuko. Every @YuumiCadence@ seconds, she alternates between healing the lowest Health ally for <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health or granting <TFTBonus>@YuumiAS@%</TFTBonus> Attack Speed to the ally who has dealt the most damage for @ASDuration@&nbsp;seconds.<br><br><spellActive>Active:</spellActive> Dance, restoring <scaleHealth>@ModifiedSelfHeal@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> Health over @SelfHealDuration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 950.0,
+      "damage": 20.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Leblanc",
+    "nombre": "LeBlanc ",
+    "coste": 3,
+    "traits": [
+      "Noxus",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Distortions",
+      "descripcion": "Summon @NumTargets@ dashing mirror images that strike the target and up to @ModifiedNumTargets@ other nearby enemies. The target takes <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and is Stunned for @StunDuration@ second, while other units hit take <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 35.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Leona",
+    "nombre": "Leona",
+    "coste": 3,
+    "traits": [
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "Solar Flare",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Reduce instances of incoming damage by&nbsp;<TFTBonus>@ModifiedDamageReduction@&nbsp;(%i:scaleAP%)</TFTBonus>. Your strongest Leona grants your strongest Diana <scaleAP>@DianaAP@</scaleAP> Ability Power every second she survives.<br><br><spellActive>Active:</spellActive> Call down sun beams on the @NumEnemies@ nearest enemies, Stunning them for @StunDuration@ second and dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. <TFTKeyword>Wound</TFTKeyword> and 1% <TFTKeyword>Burn</TFTKeyword> them for @IgniteDuration@&nbsp;seconds.<br><br>{{TFT_Keyword_Wound}}<br>{{TFT_Keyword_Burn}}"
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 50.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Loris",
+    "nombre": "Loris",
+    "coste": 3,
+    "traits": [
+      "Piltover",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_Piltover",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Piltover Tussle",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Charge and knock the target backwards, Stunning them and units hit for @KnockupDuration@ seconds and dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to them. After charging, force nearby enemies to target this&nbsp;unit."
+    },
+    "stats": {
+      "hp": 950.0,
+      "damage": 60.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Malzahar",
+    "nombre": "Malzahar",
+    "coste": 3,
+    "traits": [
+      "Void",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Void Swarm",
+      "descripcion": "Summon @NumMinions@ Voidlings that each attack a nearby enemy @NumAttacks@ times. Each attack deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 30.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Milio",
+    "nombre": "Milio",
+    "coste": 3,
+    "traits": [
+      "Ixtal",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Ultra Mega Fire Kick!!!",
+      "descripcion": "Launch a fuemigo at target that bounces @NumBounces@ times, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies hit. The last bounce deals <magicDamage>@ModifiedAOEDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies in a @HexRange@ hex&nbsp;radius."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 30.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Nautilus",
+    "nombre": "Nautilus",
+    "coste": 3,
+    "traits": [
+      "Bilgewater",
+      "Juggernaut",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Juggernaut",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Titan's Wrath",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Every @PassiveTimer@ seconds and on cast, the next attack deals damage in a 1&nbsp;hex circle and deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleMR%)</magicDamage> bonus magic&nbsp;damage.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleHealth%%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 50.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Sejuani",
+    "nombre": "Sejuani",
+    "coste": 3,
+    "traits": [
+      "Freljord",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Winter's Wrath",
+      "descripcion": "Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Strike in a cone and a line. Enemies hit take <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and are 30% <TFTKeyword>Chilled</TFTKeyword> for @ChillDuration@ seconds. If they are already <TFTKeyword>Chilled</TFTKeyword>, Stun them for @StunDuration@&nbsp;second.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 60.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Vayne",
+    "nombre": "Vayne",
+    "coste": 3,
+    "traits": [
+      "Demacia",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Tumble",
+      "descripcion": "Tumble to a nearby hex, then fire a bolt at target that deals <trueDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</trueDamage> true&nbsp;damage."
+    },
+    "stats": {
+      "hp": 650.0,
+      "damage": 70.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Zoe",
+    "nombre": "Zoe",
+    "coste": 3,
+    "traits": [
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "Double Trouble Bubble",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Damaging an enemy applies 30% <TFTKeyword>Shred</TFTKeyword> for @ShredDuration@&nbsp;seconds.<br><br><spellActive>Active:</spellActive> Kick @NumEnemies@ bubbles at nearby enemies, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and 30% <TFTKeyword>Chilling</TFTKeyword> them for @SlowDuration@&nbsp;seconds.<br><br>{{TFT_Keyword_Shred}}<br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 35.0,
+      "armor": 25.0,
+      "mr": 25.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Ambessa",
+    "nombre": "Ambessa",
+    "coste": 4,
+    "traits": [
+      "Noxus",
+      "Vanquisher"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Vanquisher"
+    ],
+    "habilidad": {
+      "nombre": "Lacerate",
+      "descripcion": "Swipe and dash around target, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies in the path. Then slam chains on target, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage in a line. If any enemies are killed, immediately recast this ability, dealing <TFTBonus>@DamageFalloff*100@%</TFTBonus>&nbsp;damage.<br><br>The slam deals <TFTBonus>@TankDamageMult*100@%</TFTBonus> more damage to Tanks."
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 50.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_BelVeth",
+    "nombre": "Bel'Veth",
+    "coste": 4,
+    "traits": [
+      "Void",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "Endless Banquet",
+      "descripcion": "<spellPassive>Passive:</spellPassive> On takedown, gain <TFTBonus>@AttackSpeedOnTakedown*100@%</TFTBonus> Attack Speed that decays over @ASDuration@ seconds.<br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage in a 2&nbsp;hex radius and transform for the rest of&nbsp;combat.<br><br>While transformed, gain <TFTBonus>@ModifiedAttackSpeed@ (%i:scaleAP%)</TFTBonus> Attack Speed, <TFTBonus>@PercentMaxHealthGain*100@%</TFTBonus> max Health, and increased Move Speed. Attacks deal <trueDamage>@TrueDamageBase@</trueDamage> bonus true damage, increased by <trueDamage>@TrueDamagePerStack@</trueDamage> for each time the same enemy is&nbsp;hit."
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 65.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Braum",
+    "nombre": "Braum",
+    "coste": 4,
+    "traits": [
+      "Freljord",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Unbreakable Frost",
+      "descripcion": "Raise shield for @Duration@ seconds, gaining <TFTBonus>@ModifiedDurability@&nbsp;(%i:scaleAP%)</TFTBonus> Durability and redirecting projectiles to towards Braum&nbsp;instead. When hit, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleArmor%%i:scaleAP%)</magicDamage> magic damage to nearby enemies and 30% <TFTKeyword>Chill</TFTKeyword> them for @ChillDuration@&nbsp;seconds.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 50.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Diana",
+    "nombre": "Diana ",
+    "coste": 4,
+    "traits": [
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "Lunar Rush",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Ability damage from your strongest Leona and strongest Diana marks enemies as&nbsp;<TFT16_Moonlight>Moonlit</TFT16_Moonlight>, reducing their damage by <TFTBonus>@MoonlightDamageReduction*100@%</TFTBonus>.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield. Unleash a bolt of lunar energy at the farthest non-<TFT16_Moonlight>Moonlit</TFT16_Moonlight> enemy within @HexLimit@ hexes, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. Then, dash to all <TFT16_Moonlight>Moonlit</TFT16_Moonlight> enemies, dealing <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to&nbsp;them."
+    },
+    "stats": {
+      "hp": 1300.0,
+      "damage": 35.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Fizz",
+    "nombre": "Fizz",
+    "coste": 4,
+    "traits": [
+      "Bilgewater",
+      "Yordle"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Yordle"
+    ],
+    "habilidad": {
+      "nombre": "Playful Trickster",
+      "descripcion": "Become briefly untargetable, then jump to the farthest enemy within @HexRange@ hexes, avoiding Tanks and Fighters, and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. For the next @NumAttacks@ attacks, gain <TFTBonus>@ASBoost*100@%</TFTBonus> Attack Speed and deal <magicDamage>@ModifiedAttackDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage on&nbsp;hit. "
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 30.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Garen",
+    "nombre": "Garen",
+    "coste": 4,
+    "traits": [
+      "Demacia",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Judgment",
+      "descripcion": "Spin for @SpinDuration@ seconds, gaining <TFTBonus>@Durability*100@%</TFTBonus> Durability and healing for <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> over the duration. Each second, deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to adjacent enemies and reduce their Armor and Magic Resistance by&nbsp;@ArmorMRReduction@."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 65.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_RiftHerald",
+    "nombre": "Heraldo de la Grieta ",
+    "coste": 4,
+    "traits": [
+      "Void",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Warp Armor",
+      "descripcion": "Gain <scaleHealth>@BonusHealth@</scaleHealth> max Health and grow larger. Slam in a @HexRange@&nbsp;Hex circle on the target, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%%i:scaleHealth%)</magicDamage> magic damage to enemies hit. For @Duration@ seconds, gain <TFTBonus>@ModifiedDurability@&nbsp;(%i:scaleAP%)</TFTBonus> Durability + <TFTBonus>@DurabilityPerEnemy*100@%</TFTBonus> for each enemy targeting this&nbsp;unit."
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 60.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6000000238418579
+    }
+  },
+  {
+    "id": "TFT16_Kaisa",
+    "nombre": "Kai'Sa ",
+    "coste": 4,
+    "traits": [
+      "Assimilator",
+      "Void",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_KaisaUnique",
+      "TFT16_Void",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Icathian Rain",
+      "descripcion": "Dash away from all enemies, then fire <scaleLevel>@NumMissiles@</scaleLevel> missiles split across the @NumTargets@ nearest enemies. Each missile deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 850.0,
+      "damage": 50.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.5
+    }
+  },
+  {
+    "id": "TFT16_Kalista",
+    "nombre": "Kalista ",
+    "coste": 4,
+    "traits": [
+      "Shadow Isles",
+      "Vanquisher"
+    ],
+    "traits_raw": [
+      "TFT16_ShadowIsles",
+      "TFT16_Vanquisher"
+    ],
+    "habilidad": {
+      "nombre": "Endless Rend",
+      "descripcion": "Summon <TFTBonus>@TotalNumberOfSpears@&nbsp;(%i:scaleSouls%)</TFTBonus> spears split among the @NumberOfEnemies@ nearest&nbsp;enemies. After a brief delay, they each impale their target, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and reducing Armor by&nbsp;<TFTBonus>@ArmorReduction@</TFTBonus>."
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 50.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Lissandra",
+    "nombre": "Lissandra",
+    "coste": 4,
+    "traits": [
+      "Freljord",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Frozen Tomb",
+      "descripcion": "Encase target in ice, Stunning them for @StunDuration@ second and dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. All enemies within 2 hexes of them split <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. If the target dies, shards fly out and split excess damage between the @NumOverkillEnemies@ nearest&nbsp;enemies.<br><br><TFTKeyword>Chilled</TFTKeyword> enemies take <TFTBonus>@DamageAmpChilledTargets*100@%</TFTBonus> more damage from this&nbsp;ability.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 30.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Lux",
+    "nombre": "Lux",
+    "coste": 4,
+    "traits": [
+      "Demacia",
+      "Arcanist"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Sorcerer"
+    ],
+    "habilidad": {
+      "nombre": "Final Spark",
+      "descripcion": "Fire a ball of light at the most enemies, dealing <magicDamage>@ModifiedDamage_Q@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the first @NumQTargets@ enemies hit and Rooting them for @StunDuration@ second. Then fire a beam, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies hit by the ball and <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all other enemies&nbsp;hit. "
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 30.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_MissFortune",
+    "nombre": "Miss Fortune",
+    "coste": 4,
+    "traits": [
+      "Bilgewater",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Heartbreaker",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks ricochet to the highest current Health enemy, dealing <TFTBonus>@AutoRicochetMutliplier*100@%</TFTBonus>&nbsp;damage.<br><br><spellActive>Active:</spellActive> Fire waves of bullets that land on the @BaseNumWaves@ nearest enemies. The first wave deals <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and the rest deal <physicalDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. Every @NumCaststoGainExtraWave@rd cast, increase the number of waves by&nbsp;1."
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 55.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Nasus",
+    "nombre": "Nasus ",
+    "coste": 4,
+    "traits": [
+      "Shurima"
+    ],
+    "traits_raw": [
+      "TFT16_Shurima"
+    ],
+    "habilidad": {
+      "nombre": "Fury of the Sands",
+      "descripcion": "Steal <trueDamage>@ModifiedHealthSteal@&nbsp;(%i:scaleAP%)</trueDamage> Health split between the <scaleLevel>@NumEnemies@</scaleLevel> nearest enemies. For @Duration@ seconds, gain <TFTBonus>@Resists@</TFTBonus> Armor and Magic Resist and deal <magicDamage>@ModifiedDamagePerSecond@&nbsp;(%i:scaleHealth%)</magicDamage> magic damage to adjacent enemies each&nbsp;second."
+    },
+    "stats": {
+      "hp": 1500.0,
+      "damage": 60.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Nidalee",
+    "nombre": "Nidalee ",
+    "coste": 4,
+    "traits": [
+      "Ixtal",
+      "Huntress"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer",
+      "TFT16_Huntress"
+    ],
+    "habilidad": {
+      "nombre": "Relentless Pounce",
+      "descripcion": "Jump on an adjacent enemy with the lowest health, then deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to them and <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. If any die, cast again, dealing <TFTBonus>@DamageReductionPerCast*100@%</TFTBonus>&nbsp;damage.<br><br>Tanks take <TFTBonus>@TankDamageMult*100@%</TFTBonus> more damage from this ability and Fighters take <TFTBonus>@FighterDamageMult*100@%</TFTBonus>&nbsp;more."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 45.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Renekton",
+    "nombre": "Renekton ",
+    "coste": 4,
+    "traits": [
+      "Shurima"
+    ],
+    "traits_raw": [
+      "TFT16_Shurima"
+    ],
+    "habilidad": {
+      "nombre": "Slice and Dice",
+      "descripcion": "Dash to the lowest Health enemy within @DashRange@ hexes, dealing <physicalDamage>@ModifiedDashDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to all enemies in the path. Then slash @BaseSlashTimes@ times, each dealing <physicalDamage>@ModifiedSlashDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. Subsquent casts increase the number of slashes by&nbsp;@NumIncreasePerCastBreakpoint@."
+    },
+    "stats": {
+      "hp": 1400.0,
+      "damage": 75.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Seraphine",
+    "nombre": "Seraphine",
+    "coste": 4,
+    "traits": [
+      "Piltover",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_Piltover",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Grand Encore",
+      "descripcion": "Gain @CrystalsPerCast@ notes. For each one active, deal <magicDamage>@ModifiedDamagePerCrystal@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to a nearby&nbsp;enemy.<br><br>While holding @CastBreakpoint@ notes on cast, consume them to project a wave of energy. Allies hit restore <scaleHealth>@ModifiedBigCastHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health. Enemies hit take <magicDamage>@ModifiedBigCastDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage, reduced by @BigCastDamageFalloff*100@% for each enemy it's passed&nbsp;through."
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 30.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.75
+    }
+  },
+  {
+    "id": "TFT16_Singed",
+    "nombre": "Singed",
+    "coste": 4,
+    "traits": [
+      "Zaun",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Poison Trail",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Run around the battlefield, leaving a poison trail that lingers for @PoisonCloudDuration@ seconds. Poison trails deal <magicDamage>@ModifiedDamagePerSecond@&nbsp;(%i:scaleAP%)</magicDamage> magic damage per second to enemies within. Gain <TFTBonus>@ModifiedManaPerSec@ (%i:scaleAS%)</TFTBonus> Mana each&nbsp;second.<br><br><spellActive>Active:</spellActive> For @SpellDuration@ seconds, gain increased Move Speed, restore <scaleHealth>@ModifiedHealPerSecond@&nbsp;(%i:scaleAP%)</scaleHealth> Health each second, and gain <TFTBonus>@ArmorMR@</TFTBonus> Armor and Magic&nbsp;Resistance."
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 15.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.699999988079071
+    }
+  },
+  {
+    "id": "TFT16_Skarner",
+    "nombre": "Skarner ",
+    "coste": 4,
+    "traits": [
+      "Ixtal"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer"
+    ],
+    "habilidad": {
+      "nombre": "Impale",
+      "descripcion": "<spellPassive>Passive:</spellPassive> All allies gain <scaleLevel>@ArmorForAllies@</scaleLevel>&nbsp;Armor.<br><br><spellPassive>Active:</spellPassive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Impale up to three nearby enemies in a line, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleArmor%)</physicalDamage> physical damage and Stunning them for <scaleLevel>@ImpaleDuration@</scaleLevel>&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 1400.0,
+      "damage": 65.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Swain",
+    "nombre": "Swain",
+    "coste": 4,
+    "traits": [
+      "Noxus",
+      "Arcanist",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Sorcerer",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Nevermove",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Each second, restore <scaleHealth>@TotalHealing@&nbsp;(%i:scaleHealth%%i:scaleAP%)</scaleHealth> Health and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies within 1&nbsp;Hex. <br><br><spellActive>Active:</spellActive> Open a demonic eye on the largest group of nearby enemies, dealing <magicDamage>@ModifiedHandDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and Stunning them for <scaleLevel>@StunDuration@</scaleLevel>&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 40.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Taric",
+    "nombre": "Taric",
+    "coste": 4,
+    "traits": [
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "Starlight's Touch",
+      "descripcion": "<spellPassive>Passive:</spellPassive> All allies gain <scaleLevel>@MRForAllies@</scaleLevel> Magic Resist. Once per combat after dropping below @InvunerabilityHealthThreshold*100@% max Health, restore <TFTBonus>@PassiveHeal@</TFTBonus> health over @InvunerabilityDuration@&nbsp;seconds.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield and grant the @NumAlliesToShield@ lowest Health allies <TFTBonus>@ModifiedAllyShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. The next <scaleLevel>@NumEmpoweredAttacks@</scaleLevel> attacks deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 1300.0,
+      "damage": 70.0,
+      "armor": 70.0,
+      "mr": 70.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Veigar",
+    "nombre": "Veigar",
+    "coste": 4,
+    "traits": [
+      "Yordle",
+      "Arcanist"
+    ],
+    "traits_raw": [
+      "TFT16_Yordle",
+      "TFT16_Sorcerer"
+    ],
+    "habilidad": {
+      "nombre": "Dark Storm",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@IncreasedAPRatio*100@%</TFTBonus> more Ability Power from all sources. <br><br><spellActive>Active:</spellActive> Call down a storm of <scaleLevel>@NumMeteors@</scaleLevel> meteors across the battlefield that deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage each. They can innately critically strike. For each one that kills an enemy, permanently gain @APPerKill@ Ability&nbsp;Power. <TFTTrackerLabel>(Permanent Ability Power: @TFTUnitProperty.:TFT16_Unit_VeigarBonusAP@%&nbsp;%i:scaleAP%) </TFTTrackerLabel><br><br>"
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 33.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Warwick",
+    "nombre": "Warwick",
+    "coste": 4,
+    "traits": [
+      "Zaun",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Eternal Hunger",
+      "descripcion": "Gain <TFTBonus>@AttackSpeed*100@%</TFTBonus>&nbsp;Attack Speed, <TFTBonus>@Omnivamp*100@%</TFTBonus> Omnivamp, increased Move Speed, and deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> bonus physical damage on attack for the rest of combat. While this effect is active, takedowns grant Warwick, Jinx, and Vi <TFTBonus>@ModifiedTakedownAttackSpeed@&nbsp;(%i:scaleAP%)</TFTBonus> Attack Speed for @AllyBuffDuration@&nbsp;seconds."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 60.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Wukong",
+    "nombre": "Wukong",
+    "coste": 4,
+    "traits": [
+      "Ionia",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Diverting Trickster",
+      "descripcion": "<spellPassive>Passive:</spellPassive> On death, summon a Stone copy with <TFTBonus>@ModifiedCloneHealth@&nbsp;(%i:scaleHealth%)</TFTBonus> Health and Wukong's items.<br><br><spellActive>Active:</spellActive> For 4 seconds, gain <TFTBonus>@ModifiedDefenses@&nbsp;(%i:scaleAP%)</TFTBonus> Armor and Magic Resist. Then spin, dealing <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage to all enemies within 2&nbsp;hexes. "
+    },
+    "stats": {
+      "hp": 1050.0,
+      "damage": 60.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.6499999761581421
+    }
+  },
+  {
+    "id": "TFT16_Yone",
+    "nombre": "Yone",
+    "coste": 4,
+    "traits": [
+      "Ionia",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "Kin of the Stained Blade",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks alternate between dealing <physicalDamage>@ModifiedBasicAttackADDamage@&nbsp;(%i:scaleAD%)</physicalDamage> bonus physical damage and <magicDamage>@ModifiedBasicAttackAPDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic&nbsp;damage.<br><br><spellActive>Active:</spellActive> Strike through the most enemies possible within @TooltipHexRange@ hexes, knocking them up for @KnockupDuration@ seconds and dealing <physicalDamage>@ModifiedPerTargetDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and <magicDamage>@ModifiedPerTargetDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</magicDamage> magic&nbsp;damage. Yone then splits <physicalDamage>@ModifiedStrikeDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and <magicDamage>@ModifiedStrikeDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</magicDamage> magic&nbsp;damage among all enemies hit.<br><br><ShowIfNot.TFT16_Unit_HasPartner><TFTShadowItemBonus>Blade Brothers:</TFTShadowItemBonus> When you field Yasuo and Yone, Yasuo assists Yone's casts.</ShowIfNot.TFT16_Unit_HasPartner><ShowIf.TFT16_Unit_HasPartner><TFTShadowItemBonus>Blade Brothers:</TFTShadowItemBonus> When Yone casts, your strongest Yasuo blinks to each target, dealing bonus physical damage.</ShowIf.TFT16_Unit_HasPartner>"
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 20.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Yunara",
+    "nombre": "Yunara",
+    "coste": 4,
+    "traits": [
+      "Ionia",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Transcendent State",
+      "descripcion": "For the next @BuffDuration@ seconds, gain <TFTBonus>@ModifiedAttackSpeed@</TFTBonus> Attack Speed, infinite range, and replace attacks with lasers. Lasers deal <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage in a line, reduced by @DamageReductionPerEnemyHit*100@% for each enemy they pass through. When lasers critically strike, they deal <trueDamage>@BonusCritDamage*100@%</trueDamage> bonus true&nbsp;damage."
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 60.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Aatrox",
+    "nombre": "Aatrox ",
+    "coste": 5,
+    "traits": [
+      "Darkin",
+      "World Ender",
+      "Slayer"
+    ],
+    "traits_raw": [
+      "TFT16_DarkinWeapon",
+      "TFT16_AatroxUnique",
+      "TFT16_Slayer"
+    ],
+    "habilidad": {
+      "nombre": "The Darkin Blade",
+      "descripcion": "<tftrules>On cast, cycle through one of the following&nbsp;abilities:</tftrules><br><br>Slash in a line, dealing <physicalDamage>@FirstCastModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies hit and 20% <TFTKeyword>Sundering</TFTKeyword> them for @SunderDuration@&nbsp;seconds.<br><br>Swipe in a cone, dealing <physicalDamage>@SecondCastModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies hit and knocking them up for @SecondCastStunDuration@&nbsp;second.<br><br>Slam on target, dealing <physicalDamage>@ThirdCastModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage in a 1&nbsp;hex circle. Targets below @ThirdCastExecute*100@% max Health are&nbsp;executed."
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 65.0,
+      "armor": 55.0,
+      "mr": 55.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Annie",
+    "nombre": "Annie",
+    "coste": 5,
+    "traits": [
+      "Dark Child",
+      "Arcanist"
+    ],
+    "traits_raw": [
+      "TFT16_DarkChild",
+      "TFT16_Sorcerer"
+    ],
+    "habilidad": {
+      "nombre": "Enraged Inferno",
+      "descripcion": "Erupt the entire battlefield in flames, permanently <TFTKeyword>Burning</TFTKeyword> and <TFTKeyword>Wounding</TFTKeyword> all enemies and dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to each of them over @DamageDuration@ seconds. <br><br>Annie's max Mana is reduced by <TFTBonus>@ManaCostReduction@</TFTBonus> for the rest of combat. Subsquent casts launch a fireball at target that deals <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage.<br><br>{{TFT_Keyword_Burn}}<br>{{TFT_Keyword_Wound}}"
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 30.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_AurelionSol",
+    "nombre": "Aurelion Sol",
+    "coste": 5,
+    "traits": [
+      "Star Forger",
+      "Targon"
+    ],
+    "traits_raw": [
+      "TFT16_AurelionSolUnique",
+      "TFT16_Targon"
+    ],
+    "habilidad": {
+      "nombre": "The Skies Descend",
+      "descripcion": "<spellPassive>Passive:</spellPassive> For every @StardustPerDamage@ ability damage dealt to enemies in player combat, gain Stardust. Stardust makes The Skies Descend more&nbsp;powerful. <rules>(Current Stardust:&nbsp;@TFTUnitProperty.:TFT16_AurelionSol_Stardust@) </rules><br><br><spellActive>Active:</spellActive> Crash a star on target, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a @InitialHexRadius@ hex radius.<br><br><spellPassive>Stardust Upgrades:</spellPassive><br><ShowIfNot.TFT16_ASol_HasTier1Upgrade><rules>@StardustThreshold1@: Create a shockwave that deals <magicDamage>@ModifiedThreshold1Damage@&nbsp;(%i:scaleAP%)</magicDamage> additional magic damage in a @Threshold1Radius@&nbsp;Hex&nbsp;radius.</rules></ShowIfNot.TFT16_ASol_HasTier1Upgrade><ShowIf.TFT16_ASol_HasTier1Upgrade><spellPassive>@StardustThreshold1@:</spellPassive> Create a shockwave that deals <magicDamage>@ModifiedThreshold1Damage@&nbsp;(%i:scaleAP%)</magicDamage> additional magic damage in a @Threshold1Radius@&nbsp;Hex&nbsp;radius.</ShowIf.TFT16_ASol_HasTier1Upgrade><br><ShowIfNot.TFT16_ASol_HasTier2Upgrade><rules>@StardustThreshold2@: The star crash deals @Threshold2DamageIncrease*100@% more&nbsp;damage.</rules></ShowIfNot.TFT16_ASol_HasTier2Upgrade><ShowIf.TFT16_ASol_HasTier2Upgrade><spellPassive>@StardustThreshold2@:</spellPassive> The star crash deals <TFTBonus>@Threshold2DamageIncrease*100@%</TFTBonus> more&nbsp;damage.</ShowIf.TFT16_ASol_HasTier2Upgrade><br><ShowIfNot.TFT16_ASol_HasTier3Upgrade><rules>@StardustThreshold3@: Shockwave increases to a @Threshold3Radius@ hex&nbsp;radius.</rules></ShowIfNot.TFT16_ASol_HasTier3Upgrade><ShowIf.TFT16_ASol_HasTier3Upgrade><spellPassive>@StardustThreshold3@:</spellPassive> Shockwave increases to a @Threshold3Radius@ hex&nbsp;radius.</ShowIf.TFT16_ASol_HasTier3Upgrade><br><ShowIfNot.TFT16_ASol_HasTier4Upgrade><rules>@StardustThreshold4@: Knock up targets in the star crash for @Threshold4KnockupDuration@&nbsp;seconds.</rules></ShowIfNot.TFT16_ASol_HasTier4Upgrade><ShowIf.TFT16_ASol_HasTier4Upgrade><spellPassive>@StardustThreshold4@:</spellPassive> Knock up targets in the star crash for @Threshold4KnockupDuration@&nbsp;seconds.</ShowIf.TFT16_ASol_HasTier4Upgrade><br><ShowIfNot.TFT16_ASol_HasTier5Upgrade><rules>@StardustThreshold5@: Shockwave increases to @Threshold5Radius@&nbsp;radius.</rules></ShowIfNot.TFT16_ASol_HasTier5Upgrade><ShowIf.TFT16_ASol_HasTier5Upgrade><spellPassive>@StardustThreshold5@:</spellPassive> Shockwave increases to @Threshold5Radius@&nbsp;radius.</ShowIf.TFT16_ASol_HasTier5Upgrade><br><ShowIfNot.TFT16_ASol_HasTier6Upgrade><rules>@StardustThreshold6@: The star crash deals @Threshold6BonusDamagePercent*100@% bonus true&nbsp;damage.</rules></ShowIfNot.TFT16_ASol_HasTier6Upgrade><ShowIf.TFT16_ASol_HasTier6Upgrade><spellPassive>@StardustThreshold6@:</spellPassive> The star crash deals @Threshold6BonusDamagePercent*100@% bonus true&nbsp;damage.</ShowIf.TFT16_ASol_HasTier6Upgrade><br><ShowIfNot.TFT16_ASol_HasTier7Upgrade><rules>@StardustThreshold7@: Also call down a meteor storm that deals <magicDamage>@ModifiedThreshold7Damage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage split between living&nbsp;enemies.</rules></ShowIfNot.TFT16_ASol_HasTier7Upgrade><ShowIf.TFT16_ASol_HasTier7Upgrade><spellPassive>@StardustThreshold7@:</spellPassive> Also call down a meteor storm that deals <magicDamage>@ModifiedThreshold7Damage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage split between living&nbsp;enemies.</ShowIf.TFT16_ASol_HasTier7Upgrade><br><ShowIfNot.TFT16_ASol_HasTier8Upgrade><rules>@StardustThreshold8@: Summon a black hole at the epicenter, instantly killing enemies&nbsp;within.</rules></ShowIfNot.TFT16_ASol_HasTier8Upgrade><ShowIf.TFT16_ASol_HasTier8Upgrade><spellPassive>@StardustThreshold8@:</spellPassive> Summon a black hole at the epicenter, instantly killing enemies&nbsp;within.</ShowIf.TFT16_ASol_HasTier8Upgrade>"
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 50.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Azir",
+    "nombre": "Azir",
+    "coste": 5,
+    "traits": [
+      "Shurima",
+      "Emperor",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_Shurima",
+      "TFT16_Emperor",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Arise!",
+      "descripcion": "<spellPassive>Passive:</spellPassive> After witnessing 3 attacks from Azir, Sand Soldiers deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to their&nbsp;target.<br><br><spellActive>Active:</spellActive> Summon a Sand Soldier near target and command them to strike. If @MaxSummons@ Soldiers are already out, they all immediately deal <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage&nbsp;instead."
+    },
+    "stats": {
+      "hp": 800.0,
+      "damage": 35.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_BaronNashor",
+    "nombre": "Barón Nashor",
+    "coste": 5,
+    "traits": [
+      "Void",
+      "Riftscourge"
+    ],
+    "traits_raw": [
+      "TFT16_Void",
+      "TFT16_BaronUnique"
+    ],
+    "habilidad": {
+      "nombre": "Wrath of the Void",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Immune to Crowd Control effects. Attacks deal damage in a line on target. If no enemies are in range, dash to the next one and knock up adjacent enemies on&nbsp;arrival.<br><br>While in the Void Rift, erupt a tentacle below a random enemy every @TentacleRefreshSeconds@ seconds that knocks them up for @TentacleKnockupDuration@&nbsp;seconds.<br><br><spellActive>Active:</spellActive> Slam and erect spikes in a 2 hex circle, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies hit. Then over 3 seconds, spit @NumAcidToShoot@ globs of acid that deal <physicalDamage>@ModifiedAcidDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 3000.0,
+      "damage": 120.0,
+      "armor": 85.0,
+      "mr": 85.0,
+      "attack_speed": 0.5
+    }
+  },
+  {
+    "id": "TFT16_Brock",
+    "nombre": "Brock",
+    "coste": 5,
+    "traits": [
+      "Ixtal"
+    ],
+    "traits_raw": [
+      "TFT16_Explorer"
+    ],
+    "habilidad": {
+      "nombre": "Seismic Slam",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Immune to crowd control effects. Attacks briefly knock up the target and deal <TFTBonus>@PassivePercentAoE*100@%</TFTBonus> damage in a 1&nbsp;hex radius around&nbsp;them.<br><br><spellActive>Active:</spellActive> Slam the ground, dealing <physicalDamage>@ModifiedSlamDamage@&nbsp;(%i:scaleHealth%%i:scaleAD%)</physicalDamage> physical damage to ALL enemies, reduced by @EffectReductionPerHex*100@% for each hex from the center (down to @EffectReductionMinimum*100@%.) If this is the first time they've been hit by Seismic Slam this combat, knock them up for up to @StunDuration@ seconds. @NumRocks@ rocks fall around the battlefield, each dealing <physicalDamage>@ModifiedRockDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies&nbsp;hit."
+    },
+    "stats": {
+      "hp": 1800.0,
+      "damage": 270.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.5
+    }
+  },
+  {
+    "id": "TFT16_Fiddlesticks",
+    "nombre": "Fiddlesticks",
+    "coste": 5,
+    "traits": [
+      "Harvester",
+      "Vanquisher"
+    ],
+    "traits_raw": [
+      "TFT16_Harvester",
+      "TFT16_Vanquisher"
+    ],
+    "habilidad": {
+      "nombre": "Crowstorm",
+      "descripcion": "Teleport into a large cluster of enemies within @SlotSearchRadius@ hexes and Stun them for @FearDuration@ seconds. Begin losing @ManaLossPerSecond@ mana per second. While casting, deal <magicDamage>@ModifiedDamagePerSecond@&nbsp;(%i:scaleAP%)</magicDamage> magic damage per second to all enemies within a @AOERadius@&nbsp;hex radius. The closest @NearestEnemies@ enemies take <TFTBonus>@NearestBonusDamage*100@%</TFTBonus> more&nbsp;damage."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 50.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Galio",
+    "nombre": "Galio",
+    "coste": 5,
+    "traits": [
+      "Demacia",
+      "Heroic"
+    ],
+    "traits_raw": [
+      "TFT16_Demacia",
+      "TFT16_Heroic"
+    ],
+    "habilidad": {
+      "nombre": "Inspirational Might",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Every @NumAttacks@rd attack deals <magicDamage>@BonusPassiveDamage@&nbsp;(%i:scaleMR%)</magicDamage> magic damage in a circle around the&nbsp;target.<br><br><spellActive>Active:</spellActive> Dash into the largest group of units and inspire all allies within 2 hexes, granting them <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@&nbsp;seconds. Then crash down, dealing <magicDamage>@ModifiedActiveDamage@&nbsp;(%i:scaleMR%%i:scaleArmor%)</magicDamage> bonus magic damage to all enemies with 2&nbsp;hexes."
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 50.0,
+      "armor": 55.0,
+      "mr": 55.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Kindred",
+    "nombre": "Kindred",
+    "coste": 5,
+    "traits": [
+      "Eternal",
+      "Quickstriker"
+    ],
+    "traits_raw": [
+      "TFT16_KindredUnique",
+      "TFT16_Rapidfire"
+    ],
+    "habilidad": {
+      "nombre": "Lamb's Respite",
+      "descripcion": "Dash, then create a @HexRadius@-hex radius zone for <scaleLevel>@Duration@</scaleLevel> seconds that shields allies within for <TFTBonus>@ModifiedShieldAmount@&nbsp;(%i:scaleAP%)</TFTBonus> health for the zone's duration. While active, double current Attack Speed and on attack, fire a secondary arrow at a nearby enemy that deals <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical&nbsp;damage. <br><br>When the zone ends, heal all allies for <scaleHealth>@ModifiedHealPercentage@&nbsp;(%i:scaleAP%)</scaleHealth> of damage dealt while it was up and dash&nbsp;away."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 73.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Lucian",
+    "nombre": "Lucian y Senna",
+    "coste": 5,
+    "traits": [
+      "Soulbound",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_Soulbound",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "The Culling",
+      "descripcion": "Fire <TFTBonus>@TotalNumShots@&nbsp;(%i:scaleAS%)</TFTBonus> shots towards target. Each shot explodes on the first enemy hit, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to all nearby enemies."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 65.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Mel",
+    "nombre": "Mel ",
+    "coste": 5,
+    "traits": [
+      "Noxus",
+      "Disruptor"
+    ],
+    "traits_raw": [
+      "TFT16_Noxus",
+      "TFT16_Magus"
+    ],
+    "habilidad": {
+      "nombre": "Radiant Eclipse",
+      "descripcion": "<spellPassive>Passive:</spellPassive> While gaining Mana, throw out @NumOfOrbs@ radiant orbs that orbit around target. They deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a 1&nbsp;hex radius and drain @ManaDrainPerSecond@ Mana from enemies hit each second. After draining @ManaAmount@ mana, gain a random Radiant Item.&nbsp;(@TFTUnitProperty.:TFT16_Mel_ManaSpent@/@ManaAmount@)<br><br><spellActive>Active:</spellActive> Detonate orbs on target, causing a @FinalExplosionHexRadius@&nbsp;hex radius explosion that deals <magicDamage>@ModifiedTargetDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to them and <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> damage to all other enemies&nbsp;hit."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 50.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Ornn",
+    "nombre": "Ornn",
+    "coste": 5,
+    "traits": [
+      "Blacksmith",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_Blacksmith",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "Call of the Forge",
+      "descripcion": "Summon an elemental from behind the farthest enemy. It 20% <TFTKeyword>Chills</TFTKeyword> enemies hit for @SlowDuration@ seconds and deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to them.<br><br>When it arrives, headbutt it and redirect it toward another distant enemy, dealing <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage&nbsp;instead.<br><br>{{TFT_Keyword_Chill}}"
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 70.0,
+      "armor": 55.0,
+      "mr": 55.0,
+      "attack_speed": 0.550000011920929
+    }
+  },
+  {
+    "id": "TFT16_Ryze",
+    "nombre": "Ryze ",
+    "coste": 5,
+    "traits": [
+      "Rune Mage"
+    ],
+    "traits_raw": [
+      "TFT16_RuneMage"
+    ],
+    "habilidad": {
+      "nombre": "Runic Overload",
+      "descripcion": "Release a runic blast, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. It splits in two, dealing <TFTBonus>@SplitPercentDamage*100@%</TFTBonus> of the damage to the closest two enemies. Each secondary blast splits an additional&nbsp;time.<br><ShowIf.TFT16_RyzeRegionBilgewater><br><spellActive>Bilgewater:</spellActive> Blasts explode on impact, dealing <TFTBonus>@BilgewaterExplosionPercent*100@%</TFTBonus> of the damage as physical damage to adjacent&nbsp;enemies.</ShowIf.TFT16_RyzeRegionBilgewater><ShowIf.TFT16_RyzeRegionDemacia><br><spellActive>Demacia:</spellActive> Execute targets below <TFTBonus>@ModifiedDemaciaExecuteThreshold@&nbsp;(%i:scaleArmor%%i:scaleMR%)</TFTBonus>&nbsp;Health.</ShowIf.TFT16_RyzeRegionDemacia><ShowIf.TFT16_RyzeRegionFreljord><br><spellActive>Freljord:</spellActive> <TFTKeyword>Chill</TFTKeyword> targets for @FreljordChillDuration@ seconds and deal <trueDamage>@ModifiedFreljordTrueDamage@&nbsp;(%i:scaleHealth%)</trueDamage> bonus true&nbsp;damage.</ShowIf.TFT16_RyzeRegionFreljord><ShowIf.TFT16_RyzeRegionIonia><br><spellActive>Ionia:</spellActive> Blasts split an additional&nbsp;time, dealing <TFTBonus>@IoniaDamageReduction*100@%</TFTBonus> damage.</ShowIf.TFT16_RyzeRegionIonia><ShowIf.TFT16_RyzeRegionExplorer><br><spellActive>Ixtal:</spellActive> Gain a random Region's effect on combat start and every @ExplorerProcRate@&nbsp;seconds.</ShowIf.TFT16_RyzeRegionExplorer><ShowIf.TFT16_RyzeRegionNoxus><br><spellActive>Noxus:</spellActive> Blasts now pierce targets, dealing <TFTBonus>@NoxusPercentDamageReduction*100@%</TFTBonus> reduced damage per enemy&nbsp;hit.</ShowIf.TFT16_RyzeRegionNoxus><ShowIf.TFT16_RyzeRegionPiltover><br><spellActive>Piltover:</spellActive> Every third cast is Overcharged, dealing <TFTBonus>@PiltoverOverchargePercentBonus*100@%</TFTBonus> more&nbsp;damage.</ShowIf.TFT16_RyzeRegionPiltover><ShowIf.TFT16_RyzeRegionShadowIsles><br><spellActive>Shadow Isles:</spellActive> Increase blast damage by <TFTBonus>@ModifiedShadowIslesBonusDamage@&nbsp;(%i:scaleSouls%)</TFTBonus>.</ShowIf.TFT16_RyzeRegionShadowIsles><ShowIf.TFT16_RyzeRegionShurima><br><spellActive>Shurima:</spellActive> Knock up enemies for @ShurimaKnockUpDuration@ seconds, with a chance to dredge up Gold or&nbsp;Treasures.</ShowIf.TFT16_RyzeRegionShurima><ShowIf.TFT16_RyzeRegionTargon><br><spellActive>Targon:</spellActive> Heal the lowest Health ally for <TFTBonus>@TargonHealPercent*100@%</TFTBonus> of the damage&nbsp;dealt.</ShowIf.TFT16_RyzeRegionTargon><ShowIf.TFT16_RyzeRegionVoid><spellActive><br>Void:</spellActive> Ignore <TFTBonus>@VoidResistIgnore*100@%</TFTBonus> of enemies' Armor and Magic Resistance.</ShowIf.TFT16_RyzeRegionVoid><ShowIf.TFT16_RyzeRegionYordle><br><spellActive>Yordle:</spellActive> Shrink targets hit, lowering their damage by <TFTBonus>@YordleDamageReductionPercent*100@%</TFTBonus> percent for @YordleDamageReductionDuration@&nbsp;seconds.</ShowIf.TFT16_RyzeRegionYordle><ShowIf.TFT16_RyzeRegionZaun><br><spellActive>Zaun:</spellActive> Poison targets, dealing <magicDamage>@ZaunDamage@</magicDamage> magic damage <TFTBonus>@ModifiedZaunTicks@&nbsp;(%i:scaleAS%)</TFTBonus> times over @ZaunPoisonDuration@&nbsp;seconds.</ShowIf.TFT16_RyzeRegionZaun>"
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 35.0,
+      "armor": 40.0,
+      "mr": 40.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Sett",
+    "nombre": "Sett",
+    "coste": 5,
+    "traits": [
+      "Ionia",
+      "The Boss"
+    ],
+    "traits_raw": [
+      "TFT16_Ionia",
+      "TFT16_TheBoss"
+    ],
+    "habilidad": {
+      "nombre": "The Show Stopper",
+      "descripcion": "Grab target and slam them forward, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> + <magicDamage>@ModifiedPercentOfTargetMaxHealth@&nbsp;(%i:scaleAP%)</magicDamage> of their max Health as magic damage to them. All other enemies within @AoERadius@ hexes take <TFTBonus>@PercentAoEDamage*100@%</TFTBonus> of the total&nbsp;damage."
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 60.0,
+      "armor": 50.0,
+      "mr": 50.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Shyvana",
+    "nombre": "Shyvana",
+    "coste": 5,
+    "traits": [
+      "Dragonborn",
+      "Juggernaut"
+    ],
+    "traits_raw": [
+      "TFT16_ShyvanaUnique",
+      "TFT16_Juggernaut"
+    ],
+    "habilidad": {
+      "nombre": "Dragon's Descent / Flame Breath",
+      "descripcion": "<spellPassive>Dragon's Descent:</spellPassive> Transform into a dragon, gaining <scaleHealth>@TransformHealth@</scaleHealth> max Health. Briefly gain <TFTBonus>@TransformDurability*100@%</TFTBonus> Durability and dive-bomb into the largest group of enemies, dealing <physicalDamage>@ModifiedDivebombDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage in a 3&nbsp;hex&nbsp;circle.<br><br><spellPassive>Flame Breath:</spellPassive> Breath fire in a cone for @SpellDuration@ seconds, dealing <physicalDamage>@ModifiedFireDamagePerSecond@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage each second to enemies&nbsp;hit."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 80.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.949999988079071
+    }
+  },
+  {
+    "id": "TFT16_Sylas",
+    "nombre": "Sylas ",
+    "coste": 5,
+    "traits": [
+      "Chainbreaker",
+      "Arcanist",
+      "Defender"
+    ],
+    "traits_raw": [
+      "TFT16_SylasTrait",
+      "TFT16_Sorcerer",
+      "TFT16_Defender"
+    ],
+    "habilidad": {
+      "nombre": "Stolen Might",
+      "descripcion": "<rules>Cast one of three spells:</rules><br><br><spellActive>Cataclysm:</spellActive> Leap on a nearby enemy. Deal <magicDamage>@ModifiedJarvanDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies within 2 hexes and Stun them for @JarvanStunDuration@&nbsp;seconds.<br><br><spellActive>Demacian Justice:</spellActive> Deal <magicDamage>@ModifiedGarenDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to target. If they are below @GarenExecute*100@% max Health, execute&nbsp;them.<br><br><spellActive>Final Spark:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Deal <magicDamage>@ModifiedLuxDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies in a&nbsp;line.<br>"
+    },
+    "stats": {
+      "hp": 1450.0,
+      "damage": 65.0,
+      "armor": 80.0,
+      "mr": 80.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_THex",
+    "nombre": "T-Hex",
+    "coste": 5,
+    "traits": [
+      "HexMech",
+      "Piltover",
+      "Gunslinger"
+    ],
+    "traits_raw": [
+      "TFT16_HexMech",
+      "TFT16_Piltover",
+      "TFT16_Gunslinger"
+    ],
+    "habilidad": {
+      "nombre": "Hextech Arsenal",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks fire a barrage of @NumBullets@ bullets.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleHealth%)</TFTBonus> Shield and begin consuming @ManaCostPerSecond@ mana per second. Each second while casting, fire a laser that deals <physicalDamage>@ModifiedLaserDamagePerSecond@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage, reduced by @LaserFalloffPerTarget*100@% per enemy hit up to @LaserFalloffCap*100@%. Additionally, launch <TFTBonus>@ModifiedMissilesPerSecond@&nbsp;(%i:scaleAS%)</TFTBonus> missiles split between @RocketNumClosestEnemies@ nearby enemies that each deal <physicalDamage>@ModifiedMissileDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical&nbsp;damage."
+    },
+    "stats": {
+      "hp": 1100.0,
+      "damage": 110.0,
+      "armor": 80.0,
+      "mr": 80.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_TahmKench",
+    "nombre": "Tahm Kench",
+    "coste": 5,
+    "traits": [
+      "Bilgewater",
+      "Glutton",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Bilgewater",
+      "TFT16_Glutton",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "Devour",
+      "descripcion": "Devour target for @BellyDuration@ seconds, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and making them immune to other sources of damage. During this time, gain <TFTBonus>@DamageReduction*100@%</TFTBonus>&nbsp;Durability. If they are immune to crowd control, deal <magicDamage>@ReducedModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage&nbsp;instead.<br><br>If they die while devoured, spit out a random component they were holding or the unit's cost in gold. Otherwise, spit them towards the farthest enemy, briefly Stunning targets on&nbsp;impact."
+    },
+    "stats": {
+      "hp": 1000.0,
+      "damage": 70.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.550000011920929
+    }
+  },
+  {
+    "id": "TFT16_Thresh",
+    "nombre": "Thresh ",
+    "coste": 5,
+    "traits": [
+      "Shadow Isles",
+      "Warden"
+    ],
+    "traits_raw": [
+      "TFT16_ShadowIsles",
+      "TFT16_Warden"
+    ],
+    "habilidad": {
+      "nombre": "The Box",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Each second, deal <magicDamage>@ModifiedHealthDrain@&nbsp;(%i:scaleAP%%i:scaleSouls%)</magicDamage> magic&nbsp;damage to all enemies within 2 hexes. Heal for <TFTBonus>@HealthDrainPercentHeal*100@%</TFTBonus> of the damage dealt by this&nbsp;effect.<br><br><spellActive>Active:</spellActive> Create a prison of walls in a 2 hex radius that lasts @TheBoxDuration@ seconds. While active, the Passive's damage is doubled. When an enemy touches a wall, they take <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. If there are less than @MinEnemiesInTheBox@ enemies inside <spellActive>The Box</spellActive> at any time, drag an enemy&nbsp;in."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 60.0,
+      "armor": 65.0,
+      "mr": 65.0,
+      "attack_speed": 0.8500000238418579
+    }
+  },
+  {
+    "id": "TFT16_Volibear",
+    "nombre": "Volibear ",
+    "coste": 5,
+    "traits": [
+      "Freljord",
+      "Bruiser"
+    ],
+    "traits_raw": [
+      "TFT16_Freljord",
+      "TFT16_Brawler"
+    ],
+    "habilidad": {
+      "nombre": "The Relentless Storm",
+      "descripcion": "Bite the target and mark them, dealing <physicalDamage>@ModifiedBiteDamage@&nbsp;(%i:scaleAD%%i:scaleHealth%)</physicalDamage> physical damage, increased by @PercentDamageIncrease*100@% if they are already marked. After casting @CastsToTransform@ times, leap to a nearby hex, activating <spellPassive>Stormbringer</spellPassive> and dealing <physicalDamage>@ModifiedSlamDamage@&nbsp;(%i:scaleHealth%%i:scaleAD%)</physicalDamage> physical damage to enemies within a two hex&nbsp;radius.<br><br><spellPassive>Stormbringer:</spellPassive> Gain <scaleLevel>@StormbringerBonusHealth@</scaleLevel> Health and <TFTBonus>@StormbringerAS*100@%</TFTBonus> Attack Speed. Every @BoltCadence@ seconds, summon a lightning bolt on a nearby enemy, dealing <magicDamage>@ModifiedBoltDamage@&nbsp;(%i:scaleHealth%%i:scaleAP%)</magicDamage> magic damage. Takedowns summon a bolt on fallen&nbsp;enemies.<br><br>"
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 55.0,
+      "armor": 60.0,
+      "mr": 60.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Xerath",
+    "nombre": "Xerath ",
+    "coste": 5,
+    "traits": [
+      "Shurima",
+      "Ascendant"
+    ],
+    "traits_raw": [
+      "TFT16_Shurima",
+      "TFT16_XerathUnique"
+    ],
+    "habilidad": {
+      "nombre": "Eye of the Ascendant",
+      "descripcion": "Launch @NumberOfBlasts@ arcane blasts randomly split between the closest @SpellRangeInEnemies@ enemies that each deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic&nbsp;damage."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 40.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.800000011920929
+    }
+  },
+  {
+    "id": "TFT16_Zaahen",
+    "nombre": "Zaahen",
+    "coste": 5,
+    "traits": [
+      "Darkin",
+      "Immortal"
+    ],
+    "traits_raw": [
+      "TFT16_DarkinWeapon",
+      "TFT16_ZaahenTrait"
+    ],
+    "habilidad": {
+      "nombre": "Divine Challenge",
+      "descripcion": "Dash around target and slash in a circle, dealing <physicalDamage>@TotalDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to target and <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to all other adjacent enemies hit. If the target doesn't die, immediately cast&nbsp;again.<br><br>If this Ability is cast @CastsToUlt@ times in a row, instead slam on target, instantly killing them and dealing <physicalDamage>@ModifiedBigAOEDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to all enemies within&nbsp;3&nbsp;hexes."
+    },
+    "stats": {
+      "hp": 1200.0,
+      "damage": 60.0,
+      "armor": 80.0,
+      "mr": 80.0,
+      "attack_speed": 1.100000023841858
+    }
+  },
+  {
+    "id": "TFT16_Ziggs",
+    "nombre": "Ziggs ",
+    "coste": 5,
+    "traits": [
+      "Zaun",
+      "Yordle",
+      "Longshot"
+    ],
+    "traits_raw": [
+      "TFT16_Zaun",
+      "TFT16_Yordle",
+      "TFT16_Longshot"
+    ],
+    "habilidad": {
+      "nombre": "Mega Inferno Bomb",
+      "descripcion": "<spellPassive>Passive:</spellPassive> Attacks are replaced with a bomb that bounces @BABounceNumber@ time, dealing <magicDamage>@ModifiedBasicAttackDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</magicDamage> magic damage to units&nbsp;hit.<br><br><spellActive>Active:</spellActive> Throw an enormous bomb at the largest @BombAOERange@-hex group of enemies that explodes on impact, dealing between <magicDamage>@ModifiedMinDamage@&nbsp;(%i:scaleAP%)</magicDamage> and <magicDamage>@ModifiedMaxDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies hit based on their distance from the&nbsp;epicenter."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": null,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.8999999761581421
+    }
+  },
+  {
+    "id": "TFT16_Zilean",
+    "nombre": "Zilean",
+    "coste": 5,
+    "traits": [
+      "Chronokeeper",
+      "Invoker"
+    ],
+    "traits_raw": [
+      "TFT16_Chronokeeper",
+      "TFT16_Invoker"
+    ],
+    "habilidad": {
+      "nombre": "Visions of the End",
+      "descripcion": "Throw a Time Bomb on the nearest enemy without one. Time Bombs deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage each second. When the target dies, they explode, dealing <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a 1&nbsp;hex radius and grant Zilean <TFTBonus>@ManaOnKill@</TFTBonus>&nbsp;mana.<br><br>If a Time Bomb is on an enemy for <scaleLevel>@MaxDurationBeforeKill@</scaleLevel> seconds and Zilean is alive, the enemy instantly&nbsp;dies."
+    },
+    "stats": {
+      "hp": 900.0,
+      "damage": 40.0,
+      "armor": 30.0,
+      "mr": 30.0,
+      "attack_speed": 0.8999999761581421
+    }
+  }
+]

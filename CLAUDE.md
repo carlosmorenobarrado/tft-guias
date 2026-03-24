@@ -42,3 +42,4 @@ Campos disponibles por participante:
 - Siempre leer RIOT_API_KEY de os.environ, nunca hardcodeada
 - Output de análisis en formato JSON o CSV en raíz del proyecto
 - Comentarios en inglés, output de consola en español
+- **Git commits: siempre usar el mensaje "viva tft guias"**

@@ -1,0 +1,40 @@
+{
+  "TFT16_Fiddlesticks|TFT16_Kindred|TFT16_Lucian": {
+    "trait_dominante_override": "TFT16_Noxus",
+    "trait_display_override": "Noxus",
+    "opener_ideal": "5 Noxus",
+    "opener_alternativo": null,
+    "nota_validacion": "Quickstriker es flex de Kindred, el eje del opener es Noxus",
+    "gameplan_early": {
+      "descripcion": "Abre con Briar (1g) + Sion (2g). Pon items en Sion para desbloquear LeBlanc — ya tienes 3 Noxus activos. Busca Draven en carrusel o tienda y ponle un item para desbloquear Darius. Con Briar + Sion + LeBlanc + Draven + Darius tienes 5 Noxus. En nivel 6 añade un Quickstriker (Ashe o Twisted Fate) para activar el trait de Kindred.",
+      "campeones_clave": ["TFT16_Briar", "TFT16_Sion", "TFT16_Leblanc", "TFT16_Draven", "TFT16_Darius"],
+      "nivel_transicion": 6,
+      "trampa_a_evitar": "No metas Quickstriker antes de tener los 5 Noxus — prioriza el trait principal primero"
+    }
+  },
+  "TFT16_Kindred|TFT16_Shyvana|TFT16_TahmKench": {
+    "trait_dominante_override": null,
+    "opener_ideal": "4 Bilgewater",
+    "opener_alternativo": null,
+    "nota_validacion": "Validado — Bilgewater es el opener correcto",
+    "gameplan_early": {
+      "descripcion": "Abre con Twisted Fate + Illaoi o Graves para activar 2 Bilgewater desde el inicio. En mid game añade Gangplank o Nautilus para llegar a 4 Bilgewater. Miss Fortune entra en nivel 8 como flex de daño.",
+      "campeones_clave": ["TFT16_TwistedFate", "TFT16_Illaoi", "TFT16_Graves", "TFT16_Gangplank", "TFT16_Nautilus"],
+      "nivel_transicion": 7,
+      "trampa_a_evitar": null
+    }
+  },
+  "TFT16_Annie|TFT16_AnnieTibbers|TFT16_Sylas": {
+    "trait_dominante_override": "TFT16_Arcanist",
+    "trait_display_override": "Arcanist",
+    "opener_ideal": "4 Arcanist o Demacia conjuradores",
+    "opener_alternativo": "Demacia con conjuradores en backline hasta que entre Lux, luego transicionar a Arcanist",
+    "nota_validacion": "Arcanist solo es eficiente en números pares (2 o 4). Con 1 solo Arcanist activo no hay sinergia.",
+    "gameplan_early": {
+      "descripcion": "El opener óptimo es Demacia con conjuradores en backline — no empieces con Arcanists sueltos porque el trait solo activa en números pares. Cuando entre Lux empieza a acumular Arcanists de 2 en 2. Neeko como holder de items es válida pero no la metas solo por el trait.",
+      "campeones_clave": ["TFT16_Lux", "TFT16_Neeko", "TFT16_Lulu", "TFT16_KogMaw"],
+      "nivel_transicion": 7,
+      "trampa_a_evitar": "No juegues 1 o 3 Arcanists — el trait es ineficiente en números impares. O tienes 2 como placeholder o llegas a 4"
+    }
+  }
+}
