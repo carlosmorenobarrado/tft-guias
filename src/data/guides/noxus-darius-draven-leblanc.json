@@ -2,6 +2,7 @@
   "slug": "noxus-darius-draven-leblanc",
   "nombre": "Noxus Reroll — Darius + Draven + LeBlanc",
   "nombreCorto": "Noxus Reroll",
+  "tier": "S+",
   "dificultad": "Alta",
   "nGames": 50,
   "top4Rate": 0.95,
@@ -24,13 +25,13 @@
     {
       "unidad": "Draven",
       "character_id": "TFT16_Draven",
-      "items_ideales": ["TFT_Item_InfinityEdge", "TFT_Item_Deathblade", "TFT_Item_LastWhisper"],
+      "items_ideales": ["TFT_Item_InfinityEdge", "TFT_Item_GuinsoosRageblade", "TFT_Item_LastWhisper"],
       "items_alternativos": ["TFT_Item_Quicksilver", "TFT_Item_GuardianAngel"]
     },
     {
       "unidad": "LeBlanc",
       "character_id": "TFT16_LeBlanc",
-      "items_ideales": ["TFT_Item_JeweledGauntlet", "TFT_Item_Shadowflame", "TFT_Item_ArchangelsStaff"],
+      "items_ideales": ["TFT_Item_JeweledGauntlet", "TFT_Item_NashorsTooth", "TFT_Item_ArchangelsStaff"],
       "items_alternativos": ["TFT_Item_RabadonsDeathcap", "TFT_Item_SpearOfShojin"]
     }
   ],

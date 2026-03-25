@@ -5,9 +5,14 @@ import CompListCard from '../components/CompListCard.astro';
 const guideModules = import.meta.glob('../data/guides/*.json', { eager: true });
 const guides = Object.values(guideModules) as any[];
 
-// Only show Tier S comps (>= 90% top4 rate), sorted by top4 rate
+// Tier S+ — comps marcadas explícitamente como S+
+const tierSPlus = guides
+  .filter(g => g.tier === 'S+')
+  .sort((a, b) => b.top4Rate - a.top4Rate);
+
+// Tier S — >= 90% top4 rate, excluyendo las que ya están en S+
 const tierS = guides
-  .filter(g => g.top4Rate >= 0.90)
+  .filter(g => g.top4Rate >= 0.90 && g.tier !== 'S+')
   .sort((a, b) => b.top4Rate - a.top4Rate);
 ---
 
@@ -29,6 +34,35 @@ const tierS = guides
     Google AdSense ad unit
   </div> -->
 
+  {/* Tier S+ */}
+  {tierSPlus.length > 0 && (
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-500 text-yellow-900 font-bold text-xl">S+</span>
+        <div>
+          <h2 class="text-xl font-bold text-tft-gold">Tier S+ — Meta Actual</h2>
+          <p class="text-sm text-tft-gold/60">La comp más dominante del parche. Validada en liga Maestro.</p>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        {tierSPlus.map((comp) => (
+          <CompListCard
+            slug={comp.slug}
+            nombre={comp.nombre}
+            nombreCorto={comp.nombreCorto}
+            top4Rate={comp.top4Rate}
+            winRate={comp.winRate}
+            dificultad={comp.dificultad}
+            nGames={comp.nGames}
+            units={comp.board_completo?.units || []}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  {/* Tier S */}
   {tierS.length > 0 ? (
     <section class="mb-12">
       <div class="flex items-center gap-3 mb-6">

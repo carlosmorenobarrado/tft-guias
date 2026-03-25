@@ -1,11 +1,12 @@
 ---
 interface Props {
-  tier: 'S' | 'A' | 'B';
+  tier: 'S+' | 'S' | 'A' | 'B';
 }
 
 const { tier } = Astro.props;
 
-const tierStyles = {
+const tierStyles: Record<string, string> = {
+  'S+': 'bg-yellow-500 text-yellow-900',
   S: 'bg-tier-s text-white',
   A: 'bg-tier-a text-white',
   B: 'bg-tier-b text-white',

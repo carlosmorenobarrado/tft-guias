@@ -18,7 +18,7 @@ export function getStaticPaths() {
 }
 
 const { guide } = Astro.props;
-const tier = guide.top4Rate >= 0.90 ? 'S' : guide.top4Rate >= 0.75 ? 'A' : 'B';
+const tier = guide.tier || (guide.top4Rate >= 0.90 ? 'S' : guide.top4Rate >= 0.75 ? 'A' : 'B');
 
 const severidadStyles = {
   critica: 'bg-red-500/20 border-red-500 text-red-400',
