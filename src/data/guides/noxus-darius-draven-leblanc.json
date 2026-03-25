@@ -70,6 +70,14 @@
       "Con los tres carries a 3★ el board es prácticamente imbatible"
     ]
   },
+  "caso_real": {
+    "youtube_id": "jXM76XMcits",
+    "titulo": "1er puesto a 100 HP — Liga Maestro EUW",
+    "descripcion": "Partida real del autor con la comp Noxus Reroll en liga Maestro. Primer puesto con 100 HP restantes.",
+    "placement": 1,
+    "hp_restante": 100,
+    "validado_por": "Gluttenkiller — Maestro EUW"
+  },
   "variantes": [
     {
       "condicion": "Draven muy contestado en tienda (2+ jugadores buscando)",

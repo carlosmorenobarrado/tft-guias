@@ -111,6 +111,29 @@ const relatedComps = allGuides
     </section>
   )}
 
+  <!-- Caso Real (Video) -->
+  {guide.caso_real?.youtube_id && (
+    <section class="mb-8">
+      <h2 class="text-xl font-bold text-tft-orange mb-4">Caso Real — Así se juega en Maestro</h2>
+      <p class="text-tft-gold/80 mb-4">{guide.caso_real.descripcion}</p>
+      <div class="relative w-full" style="padding-bottom: 56.25%">
+        <iframe
+          class="absolute inset-0 w-full h-full rounded-lg"
+          src={`https://www.youtube.com/embed/${guide.caso_real.youtube_id}`}
+          title={guide.caso_real.titulo}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+      <p class="text-sm text-tft-gold/50 mt-3">
+        ✓ Validado por {guide.caso_real.validado_por} ·
+        Placement: #{guide.caso_real.placement} ·
+        HP restante: {guide.caso_real.hp_restante}
+      </p>
+    </section>
+  )}
+
   <!-- AdSense Placeholder -->
   <div class="mb-8 p-4 border border-dashed border-tft-orange/20 rounded-lg text-center text-tft-gold/40 text-sm">
     <!-- Google AdSense ad unit -->
