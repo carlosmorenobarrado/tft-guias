@@ -102,6 +102,15 @@ const relatedComps = allGuides
     </div>
   </header>
 
+  <!-- Board Completo -->
+  {guide.board_completo && (
+    <section class="mb-8">
+      <h2 class="text-xl font-bold text-tft-orange mb-4">Board Completo</h2>
+      <p class="text-tft-gold/60 mb-4">Las 9 unidades más frecuentes en top-4 con este core.</p>
+      <BoardDisplay board={guide.board_completo} carries={guide.carries} />
+    </section>
+  )}
+
   <!-- AdSense Placeholder -->
   <div class="mb-8 p-4 border border-dashed border-tft-orange/20 rounded-lg text-center text-tft-gold/40 text-sm">
     <!-- Google AdSense ad unit -->
@@ -115,64 +124,6 @@ const relatedComps = allGuides
         <span class="bg-tft-orange/20 border border-tft-orange/40 rounded-full px-3 py-1 text-sm">
           {trait.nombre} {trait.count > 1 && <span class="text-tft-orange">({trait.count})</span>}
         </span>
-      ))}
-    </div>
-  </section>
-
-  <!-- Board Completo -->
-  {guide.board_completo && (
-    <section class="mb-8">
-      <h2 class="text-xl font-bold text-tft-orange mb-4">Board Completo</h2>
-      <p class="text-tft-gold/60 mb-4">Las 9 unidades más frecuentes en top-4 con este core.</p>
-      <BoardDisplay board={guide.board_completo} />
-    </section>
-  )}
-
-  <!-- Gameplan -->
-  <section class="mb-8">
-    <h2 class="text-xl font-bold text-tft-orange mb-4">Como Jugarla</h2>
-    <div class="space-y-4">
-      {Object.values(guide.gameplan).map((phase: any) => (
-        <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
-          <h3 class="font-bold text-tft-gold mb-2">{phase.titulo}</h3>
-          <p class="text-tft-gold/80 mb-3">{phase.descripcion}</p>
-          <ul class="space-y-1">
-            {phase.tips.map((tip: string) => (
-              <li class="text-sm text-tft-gold/70 flex items-start gap-2">
-                <span class="text-tft-orange mt-1">•</span>
-                {tip}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <!-- Items -->
-  <section class="mb-8">
-    <h2 class="text-xl font-bold text-tft-orange mb-4">Items Recomendados</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {Object.entries(guide.items).map(([carry, itemData]: [string, any]) => (
-        <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
-          <h3 class="font-bold text-tft-gold mb-3">{carry}</h3>
-          <div class="mb-3">
-            <div class="text-xs text-tft-gold/50 uppercase mb-1">Core</div>
-            <div class="flex flex-wrap gap-1">
-              {itemData.core.map((item: string) => (
-                <span class="bg-tft-orange/30 rounded px-2 py-0.5 text-sm">{item}</span>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div class="text-xs text-tft-gold/50 uppercase mb-1">Alternativas</div>
-            <div class="flex flex-wrap gap-1">
-              {itemData.alternativas.map((item: string) => (
-                <span class="bg-tft-gold/10 rounded px-2 py-0.5 text-sm text-tft-gold/70">{item}</span>
-              ))}
-            </div>
-          </div>
-        </div>
       ))}
     </div>
   </section>
@@ -208,12 +159,7 @@ const relatedComps = allGuides
       </div>
 
       <!-- Metric Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-        <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
-          <div class="text-2xl font-bold text-tft-blue">{guide.stats_enriquecidas.avg_last_round_top4}</div>
-          <div class="text-sm text-tft-gold/60 mb-1">Ronda de Supervivencia</div>
-          <div class="text-xs text-tft-gold/50">Los que ganan aguantan hasta ronda {guide.stats_enriquecidas.avg_last_round_top4} de media</div>
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
           <div class="text-2xl font-bold text-tft-purple">{(guide.stats_enriquecidas.pct_nivel_9_top4 * 100).toFixed(0)}%</div>
           <div class="text-sm text-tft-gold/60 mb-1">Nivel Critico</div>
@@ -235,6 +181,86 @@ const relatedComps = allGuides
       )}
     </section>
   )}
+
+  <!-- Gameplan -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-tft-orange mb-4">Como Jugarla</h2>
+    <div class="space-y-4">
+      <!-- Early Game -->
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">{typeof guide.gameplan.early === 'object' ? guide.gameplan.early.titulo : 'Early Game (1-3)'}</h3>
+        <p class="text-tft-gold/80 mb-3">{typeof guide.gameplan.early === 'object' ? guide.gameplan.early.descripcion : guide.gameplan.early}</p>
+        {(typeof guide.gameplan.early === 'object' ? guide.gameplan.early.tips : guide.gameplan.early_tips) && (
+          <ul class="space-y-1">
+            {(typeof guide.gameplan.early === 'object' ? guide.gameplan.early.tips : guide.gameplan.early_tips).map((tip: string) => (
+              <li class="text-sm text-tft-gold/70 flex items-start gap-2">
+                <span class="text-tft-orange mt-1">•</span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <!-- Mid Game -->
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">{typeof guide.gameplan.mid === 'object' ? guide.gameplan.mid.titulo : 'Mid Game (3-4)'}</h3>
+        <p class="text-tft-gold/80 mb-3">{typeof guide.gameplan.mid === 'object' ? guide.gameplan.mid.descripcion : guide.gameplan.mid}</p>
+        {(typeof guide.gameplan.mid === 'object' ? guide.gameplan.mid.tips : guide.gameplan.mid_tips) && (
+          <ul class="space-y-1">
+            {(typeof guide.gameplan.mid === 'object' ? guide.gameplan.mid.tips : guide.gameplan.mid_tips).map((tip: string) => (
+              <li class="text-sm text-tft-gold/70 flex items-start gap-2">
+                <span class="text-tft-orange mt-1">•</span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <!-- Late Game -->
+      <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+        <h3 class="font-bold text-tft-gold mb-2">{typeof guide.gameplan.late === 'object' ? guide.gameplan.late.titulo : 'Late Game (4+)'}</h3>
+        <p class="text-tft-gold/80 mb-3">{typeof guide.gameplan.late === 'object' ? guide.gameplan.late.descripcion : guide.gameplan.late}</p>
+        {(typeof guide.gameplan.late === 'object' ? guide.gameplan.late.tips : guide.gameplan.late_tips) && (
+          <ul class="space-y-1">
+            {(typeof guide.gameplan.late === 'object' ? guide.gameplan.late.tips : guide.gameplan.late_tips).map((tip: string) => (
+              <li class="text-sm text-tft-gold/70 flex items-start gap-2">
+                <span class="text-tft-orange mt-1">•</span>
+                {tip}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Items -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-tft-orange mb-4">Items Recomendados</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {Object.entries(guide.items).map(([carry, itemData]: [string, any]) => (
+        <div class="bg-tft-dark border border-tft-orange/30 rounded-lg p-4">
+          <h3 class="font-bold text-tft-gold mb-3">{carry}</h3>
+          <div class="mb-3">
+            <div class="text-xs text-tft-gold/50 uppercase mb-1">Core</div>
+            <div class="flex flex-wrap gap-1">
+              {itemData.core.map((item: string) => (
+                <span class="bg-tft-orange/30 rounded px-2 py-0.5 text-sm">{item}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div class="text-xs text-tft-gold/50 uppercase mb-1">Alternativas</div>
+            <div class="flex flex-wrap gap-1">
+              {itemData.alternativas.map((item: string) => (
+                <span class="bg-tft-gold/10 rounded px-2 py-0.5 text-sm text-tft-gold/70">{item}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 
   <!-- Variantes (Diferenciador) -->
   <section class="mb-8">

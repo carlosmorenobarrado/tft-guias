@@ -7,14 +7,33 @@ interface Unit {
   items: string[];
 }
 
+interface Carry {
+  unidad: string;
+  character_id: string;
+  items_ideales: string[];
+  items_alternativos?: string[];
+}
+
 interface Props {
   board: {
     n_games_analyzed: number;
     units: Unit[];
   };
+  carries?: Carry[];
 }
 
-const { board } = Astro.props;
+const { board, carries } = Astro.props;
+
+// Helper to get items for a unit - prioritizes carries.items_ideales if available
+function getUnitItems(unit: Unit): string[] {
+  if (carries) {
+    const carry = carries.find(c => c.character_id === unit.character_id);
+    if (carry && carry.items_ideales && carry.items_ideales.length > 0) {
+      return carry.items_ideales;
+    }
+  }
+  return unit.items;
+}
 
 // Helper to format unit name
 function formatUnitName(charId: string): string {
@@ -48,6 +67,7 @@ const ITEM_DISPLAY_NAMES: Record<string, string> = {
   "TFT_Item_IonicSpark": "Ionic Spark",
   "TFT_Item_JeweledGauntlet": "Jeweled Gauntlet",
   "TFT_Item_KrakensFury": "Kraken's Fury",
+  "TFT_Item_Shadowflame": "Shadowflame",
   "TFT_Item_LastWhisper": "Last Whisper",
   "TFT_Item_Morellonomicon": "Morellonomicon",
   "TFT_Item_NashorsTooth": "Nashor's Tooth",
@@ -93,6 +113,7 @@ const ITEM_IMAGE_FILES: Record<string, string> = {
   "TFT_Item_IonicSpark": "tft_item_ionicspark.tft_set13",
   "TFT_Item_JeweledGauntlet": "tft_item_jeweledgauntlet.tft_set13",
   "TFT_Item_KrakensFury": "tft_item_krakenslayer.tft_tft14_5", // Kraken's Fury = Kraken Slayer
+  "TFT_Item_Shadowflame": "tft_item_shadowflame.tft_set13",
   "TFT_Item_LastWhisper": "tft_item_lastwhisper.tft_set13",
   "TFT_Item_Morellonomicon": "tft_item_morellonomicon.tft_set13",
   "TFT_Item_NashorsTooth": "tft_item_titanichydra.tft_set13", // Nashor's uses Titanic icon
@@ -194,9 +215,9 @@ function getTierBorderColor(tier: number): string {
         </div>
 
         <!-- Item Icons -->
-        {unit.items.length > 0 && (
+        {getUnitItems(unit).length > 0 && (
           <div class="flex gap-0.5 mt-1">
-            {unit.items.slice(0, 2).map((item) => (
+            {getUnitItems(unit).slice(0, 3).map((item) => (
               <div class="w-5 h-5 sm:w-6 sm:h-6 rounded border border-tft-purple/50 overflow-hidden bg-tft-dark">
                 <img
                   src={getItemImageUrl(item)}
@@ -242,9 +263,9 @@ function getTierBorderColor(tier: number): string {
               </span>
               <span class="text-yellow-400 text-xs">{getTierStars(unit.tier_habitual)}</span>
             </div>
-            {unit.items.length > 0 && (
+            {getUnitItems(unit).length > 0 && (
               <div class="flex flex-wrap gap-1.5">
-                {unit.items.slice(0, 2).map((item) => (
+                {getUnitItems(unit).slice(0, 3).map((item) => (
                   <div class="flex items-center gap-1 bg-tft-purple/10 rounded px-1.5 py-0.5">
                     <div class="w-5 h-5 rounded overflow-hidden flex-shrink-0">
                       <img

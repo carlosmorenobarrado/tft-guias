@@ -8,11 +8,31 @@
   "winRate": 0.40,
   "avgPlacement": 2.1,
   "avgLevel": 7.8,
-  "descripcion": "La comp más sólida del meta actual. Tres carries a 3★ sostenidos por el trait Noxus, con Darius tanqueando el frente y Draven + LeBlanc destruyendo desde atrás. Rolldown agresivo en nivel 7 con slowroll previo en nivel 6 para asegurar copias.",
+  "descripcion": "La comp más sólida del meta actual. Tres carries a 3★ sostenidos por el trait Noxus, con Darius tanqueando el frente y Draven + LeBlanc destruyendo desde atrás. Slowroll en nivel 7 para asegurar copias de los tres carries.",
   "traits": [
     { "nombre": "Noxus", "count": 5 },
     { "nombre": "Bruiser", "count": 2 },
     { "nombre": "Strategist", "count": 2 }
+  ],
+  "carries": [
+    {
+      "unidad": "Darius",
+      "character_id": "TFT16_Darius",
+      "items_ideales": ["TFT_Item_SteraksGage", "TFT_Item_TitansResolve", "TFT_Item_Bloodthirster"],
+      "items_alternativos": ["TFT_Item_GuardianAngel", "TFT_Item_UnstableConcoction"]
+    },
+    {
+      "unidad": "Draven",
+      "character_id": "TFT16_Draven",
+      "items_ideales": ["TFT_Item_InfinityEdge", "TFT_Item_Deathblade", "TFT_Item_LastWhisper"],
+      "items_alternativos": ["TFT_Item_Quicksilver", "TFT_Item_GuardianAngel"]
+    },
+    {
+      "unidad": "LeBlanc",
+      "character_id": "TFT16_LeBlanc",
+      "items_ideales": ["TFT_Item_JeweledGauntlet", "TFT_Item_Shadowflame", "TFT_Item_ArchangelsStaff"],
+      "items_alternativos": ["TFT_Item_RabadonsDeathcap", "TFT_Item_SpearOfShojin"]
+    }
   ],
   "items": {
     "Darius": {
@@ -29,33 +49,25 @@
     }
   },
   "gameplan": {
-    "early": {
-      "titulo": "Early Game (1-3)",
-      "descripcion": "Juega Noxus desde el primer momento. Briar + Sion como base. Los items de LeBlanc van en Sion de placeholder — activas 3 Noxus en cuanto aparezca LeBlanc. Shen tankea mientras construyes economía.",
-      "tips": [
-        "Briar (1g) y Sion (2g) son tu opener ideal — activan Noxus desde ronda 1",
-        "Pon los items de LeBlanc en Sion de holder hasta encontrarla",
-        "Shen puede tankear el early si aparece antes que Darius"
-      ]
-    },
-    "mid": {
-      "titulo": "Mid Game (3-4)",
-      "descripcion": "Slowroll en nivel 6 si no tienes Sion estable. Board objetivo: LeBlanc + Draven + Kobuko + Sion + Darius + Neeko. Prioriza LeBlanc 3★ primero — es la más fácil de completar.",
-      "tips": [
-        "No subas de nivel 6 hasta tener al menos LeBlanc 3★",
-        "Añade un Bruiser en nivel 6 para activar Kobuko con los Conjuradores",
-        "No metas Quickstriker antes de tener los tres carries a 3★ — diluye las copias en tienda"
-      ]
-    },
-    "late": {
-      "titulo": "Late Game (4+)",
-      "descripcion": "Continúa el rolldown en orden: LeBlanc 3★ → Draven 3★ → Darius 3★. Con los tres completos sube a 8 para añadir Kindred y Shyvana. El board se vuelve prácticamente imbatible.",
-      "tips": [
-        "LeBlanc primero (3g, la menos contestada) → Draven → Darius",
-        "Darius necesita sus items desde el principio aunque esté a 2★",
-        "A nivel 8 mete Kindred y Shyvana — el late game es dominante"
-      ]
-    }
+    "early": "Abre con Briar (1g) + Sion (2g) como base Noxus. Pon los items de LeBlanc en Sion de holder — cuando aparezca LeBlanc ya tienes 3 Noxus activos. Añade Shen para activar Bruiser y preparar el desbloqueo de Kobuko más adelante.",
+    "early_tips": [
+      "Briar y Sion son tu opener ideal",
+      "Pon los items de LeBlanc en Sion para desbloquearla y luego se los quitas",
+      "Shen te da Bruiser y es clave para desbloquear Kobuko en mid game"
+    ],
+    "mid": "Sube a nivel 7 y rolleas buscando copias de los tres carries. Board objetivo en nivel 7: Draven + Sion + Darius + LeBlanc + Kobuko + Neeko + Swain (o Briar si no tienes Swain). Kobuko se desbloquea al llegar a nivel 6 con 6 niveles de estrellas entre Bruiser y Conjuradores en mesa — Shen cuenta como Bruiser y LeBlanc como Conjurador.",
+    "mid_tips": [
+      "Rolldown siempre en nivel 7, no antes",
+      "Kobuko se desbloquea con nivel 6 y 6 niveles de estrellas entre Bruiser y Conjuradores",
+      "Al nivel 7 cambia Briar por Swain — siempre. Continúas con 5 Noxus",
+      "No hay orden preferente de 3★ — compras las copias según aparecen en tienda"
+    ],
+    "late": "Con los tres carries a 3★ sube a nivel 8 y mete Kindred o Shyvana según cuál encuentres — es situacional. El board final tiene 8 unidades con 5 Noxus activos más el carry de late que hayas encontrado.",
+    "late_tips": [
+      "Kindred o Shyvana en nivel 8 — la que salga, no hay preferencia fija",
+      "Darius nunca sale — es el frontline irremplazable que va solo en la primera fila",
+      "Con los tres carries a 3★ el board es prácticamente imbatible"
+    ]
   },
   "variantes": [
     {
@@ -64,8 +76,8 @@
       "prioridad": "alta"
     },
     {
-      "condicion": "Encuentras Swain 2★ antes de nivel 8",
-      "ajuste": "Mételo como quinto Noxus — amplifica el daño de todo el board mientras completas los 3★.",
+      "condicion": "Llegas a nivel 7",
+      "ajuste": "Cambia Briar por Swain — siempre. Continúas con 5 Noxus pero Swain es mejor unidad que Briar en ese slot.",
       "prioridad": "media"
     }
   ],
@@ -163,5 +175,5 @@
     "avg_players_elim_top4": 2.1,
     "avg_damage_top4": 152.0
   },
-  "insight_ejecucion": "El orden de 3★ es el secreto: LeBlanc primero (3g, menos contestada), luego Draven, por último Darius. Darius con items desde el principio aunque esté a 2★ — sin items no aguanta el mid game."
+  "insight_ejecucion": "El rolldown es todo: a nivel 7 slowroll buscando copias de los tres carries. No hay orden preferente de 3★ — compras las copias según aparecen en tienda. La clave es tener items bien distribuidos desde el early para que cualquiera de los tres pueda cargar si llega a 3★ primero."
 }
